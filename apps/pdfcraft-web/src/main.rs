@@ -247,5 +247,5 @@ mod host {
 
 #[cfg(not(target_arch = "wasm32"))]
 fn main() {
-    eprintln!("pdfcraft-web targets wasm32: run `trunk serve` or `trunk build --release` in apps/pdfcraft-web");
+    eprintln!("pdfversa-web targets wasm32: run `trunk serve` or `trunk build --release` in apps/pdfversa-web");
 }
