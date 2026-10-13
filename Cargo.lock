@@ -3560,27 +3560,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "pdfcraft"
-version = "0.7.0"
-dependencies = [
- "eframe",
- "egui",
- "fmv-macos-events",
- "log",
- "pdfcraft-ui-egui",
- "pollster 1.0.1",
- "rustls-native-certs",
- "serde_json",
- "uds_windows",
- "ureq",
- "wayland-client",
- "wayland-protocols",
- "windows",
- "winresource",
- "winsafe",
-]
-
-[[package]]
 name = "pdfcraft-a11y"
 version = "0.7.0"
 dependencies = [
@@ -6032,6 +6011,27 @@ dependencies = [
  "glifo 0.2.0",
  "hashbrown 0.17.1",
  "vello_common 0.1.0",
+]
+
+[[package]]
+name = "versapdf"
+version = "0.7.0"
+dependencies = [
+ "eframe",
+ "egui",
+ "fmv-macos-events",
+ "log",
+ "pdfcraft-ui-egui",
+ "pollster 1.0.1",
+ "rustls-native-certs",
+ "serde_json",
+ "uds_windows",
+ "ureq",
+ "wayland-client",
+ "wayland-protocols",
+ "windows",
+ "winresource",
+ "winsafe",
 ]
 
 [[package]]
