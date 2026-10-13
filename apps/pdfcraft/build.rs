@@ -22,16 +22,16 @@ fn main() {
     res.set_icon("../../assets/app-icon/pdfcraft.ico")
         .set_icon_with_id("../../assets/app-icon/pdfcraft-document.ico", "2")
         .set_manifest(windows_manifest::WINDOWS_MANIFEST)
-        .set("ProductName", "PdfVersa")
-        .set("FileDescription", "PdfVersa PDF workbench")
-        .set("LegalCopyright", "Copyright (c) the PdfVersa Developed by David Sanculane")
-        .set("OriginalFilename", "pdfversa.exe")
-        .set("InternalName", "pdfversa.exe");
+        .set("ProductName", "Versa PDF")
+        .set("FileDescription", "Versa PDF workbench")
+        .set("LegalCopyright", "Copyright (c) 2026 ArtCraft Team and PdfCraft contributors; Versa PDF contributors")
+        .set("OriginalFilename", "pdfcraft.exe")
+        .set("InternalName", "pdfcraft.exe");
     if let Err(e) = res.compile() {
         if std::env::var_os("PDFCRAFT_REQUIRE_WINRES").is_some() {
             println!("cargo::error=embedding Windows resources failed: {e}");
             return;
         }
-        println!("cargo:warning=pdfversa.exe built without icon/version resources: {e}");
+        println!("cargo:warning=pdfcraft.exe built without icon/version resources: {e}");
     }
 }

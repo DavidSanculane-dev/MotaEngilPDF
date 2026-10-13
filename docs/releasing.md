@@ -1,12 +1,14 @@
-# Releasing PdfCraft
+# Releasing Versa PDF
 
 Every push to the `release` branch runs `.github/workflows/release.yml`. It builds installers for
 macOS, Windows, Linux, FreeBSD and the web, signs the ones it has certificates for, and creates or
-updates a **draft** GitHub Release named `PdfCraft v<version>`. Nobody sees a draft until a
+updates a **draft** GitHub Release named `Versa PDF v<version>`. Nobody sees a draft until a
 maintainer publishes it.
 
-The pipeline was ported from PhotoCraft's. User-facing names say **PdfCraft**; files, binaries and
-ids stay lowercase (`pdfcraft-<version>-<platform>-<arch>.<ext>`, `ai.storyteller.pdfcraft`).
+The pipeline was ported from PhotoCraft's. User-facing names say **Versa PDF**; release files use
+the `versa-pdf-<version>-<platform>-<arch>.<ext>` prefix and Linux app ID
+`io.github.davidsanculane-dev.versa-pdf`. The executable names (`pdfcraft`, `pdfcraft-cli`) remain
+unchanged for compatibility.
 
 ## Cutting a release
 
@@ -18,10 +20,10 @@ ids stay lowercase (`pdfcraft-<version>-<platform>-<arch>.<ext>`, `ai.storytelle
    cargo xtask version set 0.3.0       # or 0.3.0-rc.1; updates Cargo.toml and Cargo.lock
    ```
 
-   Commit the change through the normal review flow (see the `Release: PdfCraft v0.2.1` PR).
+   Commit the change through the normal review flow (see the `Release: Versa PDF v0.2.1` PR).
 2. **Merge `main` into `release`** (or fast-forward it) and push. The workflow starts by itself.
 3. **Wait for the draft.** When every job has finished (notarization is the slow part), the
-   Releases page has a draft `PdfCraft v0.3.0` targeting the pushed commit, with every artifact
+   Releases page has a draft `Versa PDF v0.3.0` targeting the pushed commit, with every artifact
    and `SHA256SUMS.txt`. The notes are generated from the merged PRs.
 4. **Check it.** Download an installer or two and read the job summaries. A `::warning::` there
    means a signing secret was missing and that artifact is unsigned.
@@ -44,24 +46,24 @@ published (`gh workflow run release.yml --ref <branch>`).
 
 | Platform | Artifacts | Built on |
 |---|---|---|
-| macOS 11+ (universal: Apple silicon + Intel) | `pdfcraft-<v>-macos-universal.dmg`, `pdfcraft-cli-<v>-macos-universal.zip` | `macos-15` |
-| Windows 10+ x64 | `pdfcraft-<v>-windows-x64.msi`, `pdfcraft-<v>-windows-x64-portable.zip` | `windows-latest` |
-| Windows 10+ x86 (32-bit) | `pdfcraft-<v>-windows-x86.msi`, `pdfcraft-<v>-windows-x86-portable.zip` | `windows-latest` |
-| Windows 11 on ARM64 | `pdfcraft-<v>-windows-arm64.msi`, `pdfcraft-<v>-windows-arm64-portable.zip` | `windows-latest` (cross-compiled) |
-| Linux x86_64 | `pdfcraft-<v>-linux-x86_64.{AppImage,AppImage.zsync,deb,rpm,tar.gz}`, `pdfcraft-cli-<v>-linux-x86_64.tar.gz` | `ubuntu-22.04` |
-| Linux aarch64 | `pdfcraft-<v>-linux-aarch64.{AppImage,AppImage.zsync,deb,rpm,tar.gz}`, `pdfcraft-cli-<v>-linux-aarch64.tar.gz` | `ubuntu-22.04-arm` |
-| Linux riscv64 | `pdfcraft-<v>-linux-riscv64.tar.gz`, `pdfcraft-cli-<v>-linux-riscv64.tar.gz` (glibc 2.39+) | `ubuntu-24.04` (cross-compiled; CLI smoke-tested under QEMU) |
-| Flatpak x86_64 | `pdfcraft-<v>-linux-x86_64.flatpak` | `ubuntu-24.04` (repackages the Linux tarball) |
-| Flatpak aarch64 | `pdfcraft-<v>-linux-aarch64.flatpak` | `ubuntu-24.04-arm` (repackages the Linux tarball) |
-| FreeBSD 14 x86_64 | `pdfcraft-<v>-freebsd-x86_64.tar.gz` | FreeBSD VM on `ubuntu-latest` |
-| Web | `pdfcraft-web-<v>.zip` (a static site; see [`packaging/web/README.md`](../packaging/web/README.md)) | `ubuntu-latest` |
+| macOS 11+ (universal: Apple silicon + Intel) | `versa-pdf-<v>-macos-universal.dmg`, `versa-pdf-cli-<v>-macos-universal.zip` | `macos-15` |
+| Windows 10+ x64 | `versa-pdf-<v>-windows-x64.msi`, `versa-pdf-<v>-windows-x64-portable.zip` | `windows-latest` |
+| Windows 10+ x86 (32-bit) | `versa-pdf-<v>-windows-x86.msi`, `versa-pdf-<v>-windows-x86-portable.zip` | `windows-latest` |
+| Windows 11 on ARM64 | `versa-pdf-<v>-windows-arm64.msi`, `versa-pdf-<v>-windows-arm64-portable.zip` | `windows-latest` (cross-compiled) |
+| Linux x86_64 | `versa-pdf-<v>-linux-x86_64.{AppImage,AppImage.zsync,deb,rpm,tar.gz}`, `versa-pdf-cli-<v>-linux-x86_64.tar.gz` | `ubuntu-22.04` |
+| Linux aarch64 | `versa-pdf-<v>-linux-aarch64.{AppImage,AppImage.zsync,deb,rpm,tar.gz}`, `versa-pdf-cli-<v>-linux-aarch64.tar.gz` | `ubuntu-22.04-arm` |
+| Linux riscv64 | `versa-pdf-<v>-linux-riscv64.tar.gz`, `versa-pdf-cli-<v>-linux-riscv64.tar.gz` (glibc 2.39+) | `ubuntu-24.04` (cross-compiled; CLI smoke-tested under QEMU) |
+| Flatpak x86_64 | `versa-pdf-<v>-linux-x86_64.flatpak` | `ubuntu-24.04` (repackages the Linux tarball) |
+| Flatpak aarch64 | `versa-pdf-<v>-linux-aarch64.flatpak` | `ubuntu-24.04-arm` (repackages the Linux tarball) |
+| FreeBSD 14 x86_64 | `versa-pdf-<v>-freebsd-x86_64.tar.gz` | FreeBSD VM on `ubuntu-latest` |
+| Web | `versa-pdf-web-<v>.zip` (a static site; see [`packaging/web/README.md`](../packaging/web/README.md)) | `ubuntu-latest` |
 
 The ARM64 Windows build is cross-compiled on the x64 runner, so signing and WiX work as for the
 other Windows builds; `.github/workflows/windows-arm64.yml` installs and runs it on ARM64 hardware.
 
 Every binary reports its version (`pdfcraft --version`, `pdfcraft-cli --version`, *Help ▸ About*).
 The workflow sets `PDFCRAFT_BUILD_SHA` and `PDFCRAFT_BUILD_DATE` (`packaging/env.sh` fills them in
-for local builds): the commit is recorded in the macOS `Info.plist` (`PdfCraftBuildCommit`) and the
+for local builds): the commit is recorded in the macOS `Info.plist` (`VersaPDFBuildCommit`) and the
 date in the AppStream metadata. The binaries don't embed the commit yet.
 
 **Fonts:** every job checks out [craft-fonts](https://github.com/storytold/craft-fonts) at the commit
@@ -74,14 +76,14 @@ deliberately.
 fetch every `kind = "model"` file in `ATTRIBUTION.toml` (verified by SHA-256) with its licence text
 and an `ATTRIBUTION.txt`, straight into the package, so packaging needs the network. They go where
 `pdfcraft_ocr::Models::dirs_beside_exe` looks: `models\` beside `pdfcraft.exe` (MSI, portable zip),
-`PdfCraft.app/Contents/Resources/models` (macOS), and `share/pdfcraft/models` beside `bin/`
+`Versa PDF.app/Contents/Resources/models` (macOS), and `share/versa-pdf/models` beside `bin/`
 (deb, rpm, tar.gz, AppImage, Flatpak, FreeBSD). The web build doesn't include them yet.
 
 ### macOS
 
 `packaging/macos/package.sh` builds both architectures, joins them with `lipo`, and assembles
-`PdfCraft.app` from `Info.plist.in` (bundle id `ai.storyteller.pdfcraft`, macOS 11+, PDF declared
-as a document type with rank Alternate, so PdfCraft is offered under Open With without taking over
+`Versa PDF.app` from `Info.plist.in` (bundle id `io.github.davidsanculane-dev.versa-pdf`, macOS 11+, PDF declared
+as a document type with rank Alternate, so Versa PDF is offered under Open With without taking over
 from Preview). Files opened from Finder arrive as Apple events, which
 `apps/pdfcraft/src/apple_events.rs` receives.
 
@@ -92,7 +94,7 @@ from Preview). Files opened from Finder arrive as Apple events, which
   stapled, and the result is checked with `codesign --verify`, `stapler validate` and `spctl`. The
   app ships on a drag-to-Applications DMG, which is signed and notarized too.
   Its Finder window (background, icon size and positions) comes from
-  [`packaging/macos/dmg/`](../packaging/macos/dmg/README.md), and its volume is named `PdfCraft`
+  [`packaging/macos/dmg/`](../packaging/macos/dmg/README.md), and its volume is named `Versa PDF`
   without the version, which the window's background needs; the DMG file name keeps the version.
 - **CLI:** `pdfcraft-cli` is signed and notarized as a zip. A bare executable can't hold a stapled
   ticket, so Gatekeeper looks it up online the first time a downloaded copy runs.
@@ -119,11 +121,11 @@ neither the MSI nor the portable zip needs the Visual C++ redistributable.
   this.
 - `installer-ui.wxs` supplies native welcome, maintenance, progress, files-in-use and outcome
   dialogs. Full UI confirms success with Finish; failures and cancellations have distinct messages.
-  The welcome dialog has a "Create a desktop shortcut" checkbox and an "Edit with PdfCraft"
+  The welcome dialog has a "Create a desktop shortcut" checkbox and an "Edit with Versa PDF"
   right-click menu checkbox, both ticked by default. `/qn` and `/qb` stay unattended and create
   both unless `INSTALLDESKTOPSHORTCUT=0` or `INSTALLPDFCONTEXTMENU=0` is passed.
 - The PDF right-click entry (#682) is a classic verb under
-  `HKLM\Software\Classes\SystemFileAssociations\.pdf\shell\PdfCraft.Edit`, so it shows whichever app
+  `HKLM\Software\Classes\SystemFileAssociations\.pdf\shell\Versa PDF.Edit`, so it shows whichever app
   is the default for `.pdf` and never changes that default. Several selected PDFs (up to 15, the
   limit for a `Document` verb) start one `pdfcraft.exe "<file>"` each, and the single-instance
   hand-off opens them as tabs. On Windows 11 it is under "Show more options"; a first-level entry
@@ -135,7 +137,8 @@ neither the MSI nor the portable zip needs the Visual C++ redistributable.
   removed on uninstall, and that `INSTALLDESKTOPSHORTCUT=0` skips the desktop one.
 - The portable zip holds both executables, the README, the licences, the OFL licence of each
   embedded craft-fonts family, and `portable.txt`. That marker beside `pdfcraft.exe` keeps the
-  settings, logs, crash recovery and new digital IDs in `PdfCraftData\` next to the exe instead of
+  settings, logs, crash recovery and new digital IDs in the compatibility-preserving `PdfCraftData\`
+  next to the exe instead of
   `%APPDATA%` and `%LOCALAPPDATA%` (`crates/ui-egui/src/portable.rs`).
 - **Signing:** `packaging/windows/sign.ps1` signs both executables and the MSI with `signtool`
   (SHA-256, RFC 3161 timestamp), from a `.pfx` (`WINDOWS_CERTIFICATE`) or Azure Trusted Signing
@@ -149,7 +152,7 @@ Locally: `dotnet tool install -g wix --version 5.0.2`, then `pwsh packaging/wind
 AppStream metainfo) and makes every format from it: an **AppImage** (any distribution, nothing to
 install), a **.deb** and an **.rpm** (built with [nfpm](https://nfpm.goreleaser.com) from
 `nfpm.yaml`; they integrate with the menu, MIME and icon caches), a **.tar.gz**, and a CLI-only
-**`pdfcraft-cli-<v>-linux-<arch>.tar.gz`** (the stripped `pdfcraft-cli` plus the licences and
+**`versa-pdf-cli-<v>-linux-<arch>.tar.gz`** (the stripped `pdfcraft-cli` plus the licences and
 README, for servers, CI and agent sandboxes). `--formats` picks a subset (`appimage deb rpm tar cli`).
 
 The binaries are built on Ubuntu 22.04, the oldest GitHub-hosted image, so they need only
@@ -158,19 +161,19 @@ xkbcommon) and the GPU (Vulkan, EGL) are loaded at runtime from the system; the 
 them as dependencies (see `nfpm.yaml`).
 
 Each AppImage embeds update information
-(`gh-releases-zsync|storytold|pdfcraft|latest|pdfcraft-*-linux-<arch>.AppImage.zsync`), and its
+(`gh-releases-zsync|DavidSanculane-dev|pdfcraft|latest|versa-pdf-*-linux-<arch>.AppImage.zsync`), and its
 `.zsync` is published beside it, so AppImageUpdate and AppImageLauncher can update it in place,
 downloading only the changed blocks. `latest` is the newest published, non-pre-release version.
 `package.sh` writes the `.zsync` when `zsyncmake` (the `zsync` package) is installed and warns
 otherwise; the release job checks both.
 
 **Flatpak:** the `flatpak` job turns each arch's tarball into a single-file bundle with
-`packaging/linux/flatpak-bundle.sh` and `flatpak/ai.storyteller.pdfcraft.bundle.yml` (no Rust build;
+`packaging/linux/flatpak-bundle.sh` and `flatpak/io.github.davidsanculane-dev.versa-pdf.bundle.yml` (no Rust build;
 the same binaries), then installs it and runs `pdfcraft-cli --version` in the sandbox.
-`flatpak/ai.storyteller.pdfcraft.yml` is the from-source manifest for a later Flathub submission;
+`flatpak/io.github.davidsanculane-dev.versa-pdf.yml` is the from-source manifest for a later Flathub submission;
 packaging-lint keeps the runtime and sandbox permissions (`finish-args`) of the two identical.
 Printing is not available in the Flatpak yet: it runs `lp`, which the freedesktop runtime lacks
-(the job logs a note); it needs the print portal. Users install the bundle with `flatpak install --user pdfcraft-<v>-linux-<arch>.flatpak`; the
+(the job logs a note); it needs the print portal. Users install the bundle with `flatpak install --user versa-pdf-<v>-linux-<arch>.flatpak`; the
 freedesktop runtime comes from Flathub.
 
 Locally (on Linux, with nfpm): `packaging/linux/package.sh` or `--formats "deb tar"`; then
@@ -217,7 +220,7 @@ release does.
 ## Scanner detections
 
 Antivirus and reputation scanners sometimes flag a released file. Check the facts before you change
-code or answer publicly. The first report was [issue #747](https://github.com/storytold/pdfcraft/issues/747),
+code or answer publicly. The first upstream report was [issue #747](https://github.com/storytold/pdfcraft/issues/747),
 a match of the `CobaltStrikeBeacon` family rule.
 
 1. **Confirm the file is the release.** Compare its SHA-256 with `SHA256SUMS.txt` on the GitHub
@@ -229,10 +232,10 @@ a match of the `CobaltStrikeBeacon` family rule.
    - `NotTrusted` or `UnknownError`: a signature exists but did not validate on this machine. Compare
      the signer and the hash with the release.
 3. **Extract the payloads without running them.** Scan the executables inside the MSI and the
-   portable zip, not only the outer installer. `7z x -oDIR pdfcraft-<version>-windows-x64.msi`
+   portable zip, not only the outer installer. `7z x -oDIR versa-pdf-<version>-windows-x64.msi`
    extracts them. The payload names are WiX-internal, so tell the executables apart by their file
    type. Don't install or run the MSI or the extracted files.
-4. **Scan with YARA and keep every match.** Use your own copies of YARA and the rule. PdfCraft
+4. **Scan with YARA and keep every match.** Use your own copies of YARA and the rule. Versa PDF
    bundles neither, and the helper never runs in the app, the installer or CI:
 
    ```powershell
@@ -249,8 +252,8 @@ a match of the `CobaltStrikeBeacon` family rule.
    distinctive code or strings, and it does not show that the software belongs to the family. Rules
    change too: CAPEv2 commit `9b599185` (2024-12-05) lengthened this rule's two repeated-byte patterns
    from 4 to 16 bytes to reduce false positives, so an older rule revision can match files that the
-   current one does not. Don't alter PdfCraft's binaries to change a scanner's result. That changes
+   current one does not. Don't alter Versa PDF's binaries to change a scanner's result. That changes
    nothing about the software.
 7. **Report.** To the scanner, send the file's SHA-256, the release URL, the rule name and revision,
-   and the matched identifiers and offsets. Report PdfCraft problems at
-   <https://github.com/storytold/pdfcraft/issues> with the same facts.
+   and the matched identifiers and offsets. Report Versa PDF problems at
+   <https://github.com/DavidSanculane-dev/pdfcraft/issues> with the same facts.

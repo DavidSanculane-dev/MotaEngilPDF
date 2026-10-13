@@ -3,7 +3,7 @@
 # exports VERSION and NFPM_ARCH.
 #
 #   nfpm package -f packaging/linux/nfpm.yaml -p deb -t dist/release/
-name: pdfcraft
+name: versa-pdf
 arch: ${NFPM_ARCH}
 platform: linux
 version: ${VERSION}
@@ -13,8 +13,8 @@ release: 1
 section: graphics
 priority: optional
 maintainer: ${PDFCRAFT_MAINTAINER}
-vendor: Learning Machines LLC
-homepage: https://getartcraft.com/apps/pdfcraft
+vendor: Versa PDF contributors
+homepage: https://github.com/DavidSanculane-dev/pdfcraft
 license: MIT OR Apache-2.0
 description: |-
   Open-source, native PDF workbench: read, comment, fill and sign forms,
