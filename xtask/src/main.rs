@@ -1,4 +1,4 @@
-//! Project automation for PdfCraft, run via `cargo xtask <command>`.
+//! Project automation for Versa PDF, run via `cargo xtask <command>`.
 
 use std::process::ExitCode;
 

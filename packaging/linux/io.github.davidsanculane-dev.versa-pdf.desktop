@@ -1,14 +1,14 @@
 [Desktop Entry]
 Type=Application
-Name=PdfCraft
+Name=Versa PDF
 GenericName=PDF Editor
 Comment=Read, organize, combine, split and secure PDFs
 Exec=pdfcraft %U
 TryExec=pdfcraft
-Icon=ai.storyteller.pdfcraft
+Icon=io.github.davidsanculane-dev.versa-pdf
 Terminal=false
 StartupNotify=true
-StartupWMClass=ai.storyteller.pdfcraft
+StartupWMClass=io.github.davidsanculane-dev.versa-pdf
 Categories=Office;Viewer;
 Keywords=pdf;viewer;editor;annotate;sign;forms;merge;split;
 MimeType=application/pdf;

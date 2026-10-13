@@ -13,16 +13,16 @@ fn main() {
         return;
     }
     let mut res = winresource::WindowsResource::new();
-    res.set("ProductName", "PdfVersa CLI")
-        .set("FileDescription", "PdfVersa command-line tool")
-        .set("LegalCopyright", "Copyright (c) the PdfVersa Developed by David Sanculane")
-        .set("OriginalFilename", "pdfversa-cli.exe")
-        .set("InternalName", "pdfversa-cli.exe");
+    res.set("ProductName", "Versa PDF")
+        .set("FileDescription", "Versa PDF command-line tool")
+        .set("LegalCopyright", "Copyright (c) 2026 ArtCraft Team and PdfCraft contributors; Versa PDF contributors.")
+        .set("OriginalFilename", "pdfcraft-cli.exe")
+        .set("InternalName", "pdfcraft-cli");
     if let Err(e) = res.compile() {
         if std::env::var_os("PDFCRAFT_REQUIRE_WINRES").is_some() {
             println!("cargo::error=embedding Windows resources failed: {e}");
             return;
         }
-        println!("cargo:warning=pdfversa-cli.exe built without version resources: {e}");
+        println!("cargo:warning=pdfcraft-cli.exe built without version resources: {e}");
     }
 }

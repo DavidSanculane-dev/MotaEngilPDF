@@ -1,7 +1,7 @@
 //! `cargo xtask assets`: enforce the asset policy (AGENTS.md §1).
 //!
 //! `ATTRIBUTION.toml` lists every asset: committed or vendored files (`[[asset]]`), files that
-//! Cargo dependencies compile into PdfCraft (`[[bundled]]`), and files xtask downloads at build
+//! Cargo dependencies compile into Versa PDF (`[[bundled]]`), and files xtask downloads at build
 //! time (`[[fetched]]`). This gate fails when:
 //! - an asset-like file in the repository has no entry, or its SHA-256 differs;
 //! - a licence is not on the allowlist, or a declared licence file is missing;
@@ -36,11 +36,6 @@ pub const ALLOWED_LICENCES: &[&str] = &[
 ];
 
 /// The closed list of Adobe-authored, non-visual technical data (AGENTS.md §1.1): (crate, path).
-/// Storyteller's own brand marks (the ArtCraft name and logos): shipped in the app and docs, but
-/// not licensed for reuse by forks. Allowed only for `kind = "logo"` entries under `docs/brand/`
-/// (AGENTS.md §1.2).
-pub const BRAND_LICENCE: &str = "LicenseRef-Storyteller-Trademark";
-
 pub const ADOBE_DATA_ALLOWED: &[(&str, &str)] = &[("hayro-cmap", "assets/cmaps.brotli"), ("hayro-interpret", "src/font/generated/metrics.rs")];
 
 /// File extensions that count as assets wherever they appear in the repository.
@@ -235,10 +230,7 @@ pub fn check(root: &Path, m: &Manifest, repo_files: &[String], lock: &BTreeSet<(
         if !seen.insert(a.path.clone()) {
             problems.push(format!("{}: listed twice", a.path));
         }
-        let brand = a.licence == BRAND_LICENCE && a.kind == "logo" && a.path.starts_with("docs/brand/");
-        if !brand {
-            licence_ok(&a.path, &a.licence, &mut problems);
-        }
+        licence_ok(&a.path, &a.licence, &mut problems);
         if !root.join(&a.licence_file).is_file() {
             problems.push(format!("{}: licence file {} is missing", a.path, a.licence_file));
         }
@@ -351,7 +343,7 @@ pub fn models(args: &[String]) -> Result<()> {
 
 /// The credits shipped beside the models (their licences require attribution).
 fn models_attribution(m: &Manifest) -> String {
-    let mut s = String::from("PdfCraft's text recognition (Scan & OCR) uses these models, unmodified.\n");
+    let mut s = String::from("Versa PDF's text recognition (Scan & OCR) uses these models, unmodified.\n");
     for f in m.fetched.iter().filter(|f| f.kind == "model") {
         let _ = write!(
             s,
@@ -367,7 +359,7 @@ pub fn render_markdown(m: &Manifest) -> String {
     let mut s = String::new();
     s.push_str("# Attribution\n\n");
     s.push_str("<!-- Generated from ATTRIBUTION.toml by `cargo xtask assets --write`. Do not edit by hand. -->\n\n");
-    s.push_str("Every asset PdfCraft includes, bundles or uses to build its published material, with its author, source and licence. ");
+    s.push_str("Every asset Versa PDF includes, bundles or uses to build its published material, with its author, source and licence. ");
     s.push_str(
         "The policy is in [AGENTS.md](AGENTS.md) §1. The machine-readable list, with SHA-256 hashes, is [ATTRIBUTION.toml](ATTRIBUTION.toml). ",
     );
@@ -544,19 +536,10 @@ mod tests {
     }
 
     #[test]
-    fn brand_licence_only_for_brand_logos() {
-        let root = super::root();
-        for (path, kind, pass) in [
-            ("docs/brand/artcraft-mark.svg", "logo", true),
-            ("docs/brand/artcraft-mark.svg", "icon", false),
-            ("assets/icons/mark.svg", "logo", false),
-        ] {
-            let mut a = asset(path, "Storyteller", kind, BRAND_LICENCE);
-            a.licence_file = "docs/brand/LICENSE-brand.txt".into();
-            let m = Manifest { asset: vec![a], ..Default::default() };
-            let p = check(&root, &m, &[], &BTreeSet::new());
-            assert_eq!(p.iter().all(|p| !p.contains("allowlist")), pass, "{path} {kind}: {p:?}");
-        }
+    fn trademark_licences_are_not_allowlisted() {
+        let m = Manifest { asset: vec![asset("assets/icons/x.svg", "Someone", "logo", "LicenseRef-Storyteller-Trademark")], ..Default::default() };
+        let p = check(&root(), &m, &[], &lock(&[]));
+        assert!(p.iter().any(|p| p.contains("not on the allowlist")), "{p:?}");
     }
 
     #[test]

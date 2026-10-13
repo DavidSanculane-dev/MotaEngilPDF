@@ -3,11 +3,11 @@
 //! Without a logger every `log::warn!`/`log::error!` in the workspace (a failed autosave, a page
 //! that would not render, a render worker that could not start, the panic hook's report) vanished.
 //! A launch from a desktop menu has no terminal, so the file is what a bug report can attach:
-//! `<settings dir>/logs/pdfcraft.log`, next to `app.ron` (see `settings_dir` in `main.rs`). Each
-//! start moves the previous log to `pdfcraft.1.log` (and that one to `.2`), so the log of a run
+//! `<settings dir>/logs/versa-pdf.log`, next to `app.ron` (see `settings_dir` in `main.rs`). Each
+//! start moves the previous log to `versa-pdf.1.log` (and that one to `.2`), so the log of a run
 //! that crashed survives the next launch.
 //!
-//! Levels: `info` for PdfCraft's own crates, `warn` for everything else (wgpu and naga are
+//! Levels: `info` for Versa PDF's own crates, `warn` for everything else (wgpu and naga are
 //! chatty). `RUST_LOG` replaces that with env_logger-style directives: `debug`,
 //! `warn,pdfcraft_render=trace`, `wgpu_core=info`. A directive ending in `*` matches every target
 //! that starts with it (`pdfcraft*=debug`).
@@ -26,8 +26,8 @@ use std::time::SystemTime;
 use log::LevelFilter;
 
 /// The current log file's name inside the log directory.
-pub const LOG_FILE: &str = "pdfcraft.log";
-/// How many previous logs are kept (`pdfcraft.1.log` … `pdfcraft.<KEEP>.log`).
+pub const LOG_FILE: &str = "versa-pdf.log";
+/// How many previous logs are kept (`versa-pdf.1.log` … `versa-pdf.<KEEP>.log`).
 pub const KEEP: usize = 2;
 /// The log file stops growing past this size (a runaway warning can't fill the disk).
 pub const MAX_FILE_BYTES: u64 = 16 * 1024 * 1024;
@@ -116,7 +116,7 @@ fn civil_from_days(days: u64) -> (u64, u64, u64) {
 }
 
 fn numbered(dir: &Path, n: usize) -> PathBuf {
-    if n == 0 { dir.join(LOG_FILE) } else { dir.join(format!("pdfcraft.{n}.log")) }
+    if n == 0 { dir.join(LOG_FILE) } else { dir.join(format!("versa-pdf.{n}.log")) }
 }
 
 /// Shift the previous logs up one (`.log` → `.1.log` → … → `.<KEEP>.log`, the oldest dropped)
@@ -349,8 +349,8 @@ mod tests {
             std::fs::write(&path, format!("run {run}")).expect("write");
         }
         assert_eq!(read(&dir.join(LOG_FILE)), "run 4");
-        assert_eq!(read(&dir.join("pdfcraft.1.log")), "run 3");
-        assert_eq!(read(&dir.join("pdfcraft.2.log")), "run 2");
+        assert_eq!(read(&dir.join("versa-pdf.1.log")), "run 3");
+        assert_eq!(read(&dir.join("versa-pdf.2.log")), "run 2");
         assert!(!dir.join("pdfcraft.3.log").exists(), "only {KEEP} old logs are kept");
         let _ = std::fs::remove_dir_all(&dir);
     }

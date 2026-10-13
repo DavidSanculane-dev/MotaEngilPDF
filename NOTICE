@@ -1,11 +1,10 @@
-PdfCraft
+Versa PDF
 Copyright (c) 2026 ArtCraft Team and the PdfCraft contributors.
 Licensed under the MIT License or the Apache License, Version 2.0, at your option
 (LICENSE-MIT, LICENSE-APACHE).
 
-The ArtCraft name, wordmark and logos in docs/brand/ are trademarks of the ArtCraft Team. They are
-not open source and are not covered by the license above; their terms are in
-docs/brand/LICENSE-brand.txt.
+Versa PDF is an independent fork based on PdfCraft by the ArtCraft team. It is not affiliated with
+or endorsed by the original maintainers.
 
 Third-party material
 
@@ -53,7 +52,7 @@ google/fonts at a pinned commit, verified by SHA-256, all under the SIL Open Fon
 "Downloaded at build time" table in ATTRIBUTION.md.
 
 Asset licences are not visible to cargo-deny; keep this file current whenever assets or asset-bundling
-dependencies change (plan/adr/0002, 0006).
+dependencies change.
 
 Vendored (vendor/, patched; see vendor/README.md):
 - hayro 0.7.1 — Apache-2.0 OR MIT, Copyright the hayro authors (licence files kept in vendor/hayro).
