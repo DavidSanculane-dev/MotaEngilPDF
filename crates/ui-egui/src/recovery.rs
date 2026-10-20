@@ -41,8 +41,8 @@ impl RecoveryStore {
     }
 
     /// `Recovery` in the portable data folder in portable mode ([`crate::portable`]), otherwise
-    /// the platform's per-user data folder: `~/Library/Application Support/Versa PDF/Recovery`
-    /// (macOS), `%LOCALAPPDATA%\Versa PDF\Recovery` (Windows), or
+    /// the platform's per-user data folder: `~/Library/Application Support/Mota-Engil PDF Editor/Recovery`
+    /// (macOS), `%LOCALAPPDATA%\Mota-Engil PDF Editor\Recovery` (Windows), or
     /// `$XDG_DATA_HOME/versa-pdf/recovery` / `~/.local/share/versa-pdf/recovery` (others).
     pub fn default_dir() -> Option<PathBuf> {
         if let Some(dir) = crate::portable::data_dir() {
@@ -50,9 +50,9 @@ impl RecoveryStore {
         }
         let env = |k: &str| std::env::var_os(k).filter(|v| !v.is_empty()).map(PathBuf::from);
         if cfg!(target_os = "macos") {
-            env("HOME").map(|h| h.join("Library/Application Support/Versa PDF/Recovery"))
+            env("HOME").map(|h| h.join("Library/Application Support/Mota-Engil PDF Editor/Recovery"))
         } else if cfg!(windows) {
-            env("LOCALAPPDATA").map(|d| d.join("Versa PDF").join("Recovery"))
+            env("LOCALAPPDATA").map(|d| d.join("Mota-Engil PDF Editor").join("Recovery"))
         } else {
             env("XDG_DATA_HOME").or_else(|| env("HOME").map(|h| h.join(".local/share"))).map(|d| d.join("versa-pdf/recovery"))
         }

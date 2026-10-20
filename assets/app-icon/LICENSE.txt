@@ -1,8 +1,8 @@
-Versa PDF app icon (pdfcraft.svg, pdfcraft-small.svg and every file derived from them in this
+Mota-Engil PDF Editor app icon (pdfcraft.svg, pdfcraft-small.svg and every file derived from them in this
 directory: pdfcraft-1024.png, pdfcraft.icns, pdfcraft.ico, hicolor/).
 
-Original geometric artwork created for Versa PDF by its contributors. Licensed like the rest of
-Versa PDF, under either of
+Original geometric artwork created for Mota-Engil PDF Editor by its contributors. Licensed like the rest of
+Mota-Engil PDF Editor, under either of
 
   * Apache License, Version 2.0 (https://www.apache.org/licenses/LICENSE-2.0)
   * MIT license (https://opensource.org/licenses/MIT)

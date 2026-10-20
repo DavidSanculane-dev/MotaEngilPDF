@@ -119,15 +119,15 @@
 	Next page	Келесі бет
 	Previous page	Алдыңғы бет
 	Current page — type a page number or label (such as iv) and press Enter	Ағымдағы бет — бет нөмірін немесе белгісін (мысалы, iv) теріңіз де, Enter пернесін басыңыз
-	Welcome to Versa PDF	Versa PDF-ге қош келдіңіз
+	Welcome to Mota-Engil PDF Editor	Mota-Engil PDF Editor-ге қош келдіңіз
 	An open-source PDF workbench — local, private, and scriptable.	Ашық бастапқы кодты PDF жұмыс орны — жергілікті, жеке әрі скрипттерді қолдайтын.
 	Recommended tools	Ұсынылған құралдар
 	Use now	Дәл қазір пайдалану
 	Open file	Файлды ашу
 	Recent	Соңғы
-	Files you open in Versa PDF appear here. Drop a PDF anywhere to open it.	Versa PDF-те ашқан файлдарыңыз осында көрсетіледі. PDF файлын ашу үшін оны кез келген жерге апарып тастаңыз.
+	Files you open in Mota-Engil PDF Editor appear here. Drop a PDF anywhere to open it.	Mota-Engil PDF Editor-те ашқан файлдарыңыз осында көрсетіледі. PDF файлын ашу үшін оны кез келген жерге апарып тастаңыз.
 	Privacy	Жекелік
-	Versa PDF works offline. No telemetry, no account, and no cloud processing unless you add a provider.	Versa PDF офлайн жұмыс істейді. Провайдер қоспағаныңызша телеметрия да, тіркелгі де, бұлтта өңдеу де жоқ.
+	Mota-Engil PDF Editor works offline. No telemetry, no account, and no cloud processing unless you add a provider.	Mota-Engil PDF Editor офлайн жұмыс істейді. Провайдер қоспағаныңызша телеметрия да, тіркелгі де, бұлтта өңдеу де жоқ.
 	Scripts run in a sandbox without file or network access. With JavaScript off, Acrobat's standard format, validate and calculate functions still work.	Скрипттер файлға да, желіге де қатынасы жоқ құмсалғышта орындалады. JavaScript өшірулі тұрса да, Acrobat-тың стандартты пішімдеу, тексеру және есептеу функциялары әлі де жұмыс істейді.
 	Back to all tools	Барлық құралдарға оралу
 	Close panel	Панельді жабу
@@ -264,10 +264,11 @@
 	Split document…	Құжатты бөлу…
 	Number pages…	Беттерді нөмірлеу…
 	Keyboard shortcuts	Пернетақта тіркесімдері
-	Versa PDF web page	Versa PDF веб-сайты
-	Versa PDF on GitHub	GitHub-тағы Versa PDF
+	Mota-Engil PDF Editor web page	Mota-Engil PDF Editor веб-сайты
+	Mota-Engil PDF Editor on GitHub	GitHub-тағы Mota-Engil PDF Editor
+	Report an issue	Мәселе туралы хабарлау
 	Check for updates…	Жаңартуларды тексеру…
-	About Versa PDF	Versa PDF туралы
+	About Mota-Engil PDF Editor	Mota-Engil PDF Editor туралы
 	Export a PDF	PDF экспорттау
 	Export to	Мынаған экспорттау
 	Microsoft Word (.docx)	Microsoft Word (.docx)
@@ -721,9 +722,9 @@
 	Check for updates	Жаңартуларды тексеру
 	No check has run yet.	Тексеру әлі жүргізілген жоқ.
 	Checking for a newer version…	Жаңа нұсқа бар ма екені тексерілуде…
-	Versa PDF {v} is available.	Versa PDF {v} қолжетімді.
+	Mota-Engil PDF Editor {v} is available.	Mota-Engil PDF Editor {v} қолжетімді.
 	You have version {c}. Download the new version from its release page.	Сізде {c} нұсқасы бар. Жаңа нұсқаны шығарылым бетінен жүктеп алыңыз.
-	Versa PDF {c} is up to date.	Versa PDF {c} нұсқасы ең соңғы.
+	Mota-Engil PDF Editor {c} is up to date.	Mota-Engil PDF Editor {c} нұсқасы ең соңғы.
 	Couldn't check for updates: {e}	Жаңартуларды тексеру мүмкін болмады: {e}
 	You have version {c}. All releases are listed at {page}.	Сізде {c} нұсқасы бар. Барлық шығарылымдар {page} бетінде көрсетілген.
 	Asks GitHub for the latest release. Nothing is downloaded or installed automatically.	GitHub-тан соңғы шығарылымды сұрайды. Ештеңе автоматты түрде жүктелмейді немесе орнатылмайды.
@@ -831,8 +832,8 @@
 	No changes allowed	Ешқандай өзгеріс рұқсат етілмейді
 	Annotations, form fill-in, and digital signatures	Белгілеулер, форманы толтыру және цифрлық қолтаңбалар
 	Form fill-in and digital signatures	Форманы толтыру және цифрлық қолтаңбалар
-	The key is in the macOS Keychain, which may ask to allow Versa PDF to use it.	Кілт macOS Keychain ішінде; ол Versa PDF-ге оны пайдалануға рұқсат сұрауы мүмкін.
-	The key is in the Windows certificate store, which may ask to allow Versa PDF to use it.	Кілт Windows сертификаттар қоймасында; ол Versa PDF-ге оны пайдалануға рұқсат сұрауы мүмкін.
+	The key is in the macOS Keychain, which may ask to allow Mota-Engil PDF Editor to use it.	Кілт macOS Keychain ішінде; ол Mota-Engil PDF Editor-ге оны пайдалануға рұқсат сұрауы мүмкін.
+	The key is in the Windows certificate store, which may ask to allow Mota-Engil PDF Editor to use it.	Кілт Windows сертификаттар қоймасында; ол Mota-Engil PDF Editor-ге оны пайдалануға рұқсат сұрауы мүмкін.
 	Digital ID password	Цифрлық ID құпиясөзі
 	Back	Артқа
 	Validate all	Барлығын тексеру
@@ -1324,7 +1325,7 @@
 	Anyone opening the document will need this password. It's applied when you save.	Құжатты ашатын кез келген адамға осы құпиясөз қажет болады. Ол сақтау кезінде қолданылады.
 	The document opens without a password; this password is needed to change the restrictions. It's applied when you save.	Құжат құпиясөзсіз ашылады; шектеулерді өзгерту үшін осы құпиясөз керек. Ол сақтау кезінде қолданылады.
 	Recover unsaved documents?	Сақталмаған құжаттарды қалпына келтіру керек пе?
-	Versa PDF didn't shut down normally. These documents had changes that were autosaved:	Versa PDF қалыпты жабылмады. Осы құжаттардың өзгерістері автосақталды:
+	Mota-Engil PDF Editor didn't shut down normally. These documents had changes that were autosaved:	Mota-Engil PDF Editor қалыпты жабылмады. Осы құжаттардың өзгерістері автосақталды:
 	just now	жаңа ғана
 	{n} min ago	{n} минут бұрын
 	{n} h ago	{n} сағат бұрын
@@ -1480,10 +1481,10 @@
 	On the web, open or drop an image to convert it	Веб-нұсқада түрлендіру үшін суретті ашыңыз немесе сүйреп әкеліп тастаңыз
 	Couldn't optimize the file: {e}	Файлды оңтайландыру мүмкін болмады: {e}
 	Couldn't write {path}: {e}	{path} жолына жазу мүмкін болмады: {e}
-	The form asks to be submitted to {u}; Versa PDF doesn't send form data. Save the document to keep your entries.	Форма {u} адресіне жіберілуді сұрайды; Versa PDF форма деректерін жібермейді. Енгізген деректеріңізді сақтап қалу үшін құжатты сақтаңыз.
+	The form asks to be submitted to {u}; Mota-Engil PDF Editor doesn't send form data. Save the document to keep your entries.	Форма {u} адресіне жіберілуді сұрайды; Mota-Engil PDF Editor форма деректерін жібермейді. Енгізген деректеріңізді сақтап қалу үшін құжатты сақтаңыз.
 	This PDF uses the unsupported {s} action.	Бұл PDF қолдау көрсетілмейтін {s} әрекетін пайдаланады.
 	{name}: the {other} action isn't supported yet	{name}: {other} әрекеті әлі қолдау көрсетілмейді
-	{name} submits the form to {url}; Versa PDF doesn't send form data. Save the document to keep your entries.	{name} форманы {url} адресіне жібереді; Versa PDF форма деректерін жібермейді. Енгізген деректеріңізді сақтап қалу үшін құжатты сақтаңыз.
+	{name} submits the form to {url}; Mota-Engil PDF Editor doesn't send form data. Save the document to keep your entries.	{name} форманы {url} адресіне жібереді; Mota-Engil PDF Editor форма деректерін жібермейді. Енгізген деректеріңізді сақтап қалу үшін құжатты сақтаңыз.
 	Export stopped: {e}	Экспорт тоқтатылды: {e}
 	Exported 1 image	1 сурет экспортталды
 	Exported {n} images	{n} сурет экспортталды
@@ -1696,8 +1697,8 @@
 	Signed and all signatures are valid.	Қол қойылды, барлық қолтаңбалар жарамды.
 	At least one signature has problems.	Кемінде бір қолтаңбада мәселелер бар.
 	This document is secured. Some changes are restricted by its security settings.	Бұл құжат қорғалған. Кейбір өзгерістер оның қауіпсіздік параметрлерімен шектеулі.
-	This is a dynamic XFA form, which Versa PDF can't display yet. What you see is the file's placeholder page.	Бұл динамикалық XFA формасы, оны Versa PDF әлі көрсете алмайды. Көріп тұрғаныңыз — файлдың орынбасар беті.
-	This form also contains XFA data, which Versa PDF doesn't read yet. You can fill its fields, but Acrobat may show the XFA values instead.	Бұл формада Versa PDF әлі оқымайтын XFA деректері де бар. Өрістерін толтыра аласыз, бірақ Acrobat орнына XFA мәндерін көрсетуі мүмкін.
+	This is a dynamic XFA form, which Mota-Engil PDF Editor can't display yet. What you see is the file's placeholder page.	Бұл динамикалық XFA формасы, оны Mota-Engil PDF Editor әлі көрсете алмайды. Көріп тұрғаныңыз — файлдың орынбасар беті.
+	This form also contains XFA data, which Mota-Engil PDF Editor doesn't read yet. You can fill its fields, but Acrobat may show the XFA values instead.	Бұл формада Mota-Engil PDF Editor әлі оқымайтын XFA деректері де бар. Өрістерін толтыра аласыз, бірақ Acrobat орнына XFA мәндерін көрсетуі мүмкін.
 	This document contains {n} interactive form fields.	Бұл құжат {n} интерактивті форма өрісін қамтиды.
 	This file was damaged and has been repaired. Saving keeps the repaired version.	Бұл файл зақымдалған еді және жөнделді. Сақтау кезінде жөнделген нұсқа сақталады.
 	Dismiss	Жабу
@@ -2051,7 +2052,7 @@ calendar date	September	Қыркүйек
 calendar date	October	Қазан
 calendar date	November	Қараша
 calendar date	December	Желтоқсан
-	Reopen the files that were open when Versa PDF last closed	Versa PDF соңғы рет жабылғанда ашық болған файлдарды қайта ашу
+	Reopen the files that were open when Mota-Engil PDF Editor last closed	Mota-Engil PDF Editor соңғы рет жабылғанда ашық болған файлдарды қайта ашу
 	Clear Recent Files	Соңғы файлдарды тазарту
 	Remove from Recent	Соңғылардан алып тастау
 	Remove {name} from Recent	{name} дегенді соңғылардан алып тастау
@@ -2063,8 +2064,8 @@ calendar date	December	Желтоқсан
 	A link	Сілтеме
 	A button	Түйме
 	A script	Сценарий
-	{who} in this document tried to open an address Versa PDF won't open: {e}.	Осы құжаттағы {who} Versa PDF ашпайтын адресті ашпақ болды: {e}.
-	{who} in this document tried to open an address Versa PDF won't open: {e}. Only web (http, https) and email (mailto) links open from documents.	Осы құжаттағы {who} Versa PDF ашпайтын адресті ашпақ болды: {e}. Құжаттардан тек веб (http, https) және email (mailto) сілтемелері ашылады.
+	{who} in this document tried to open an address Mota-Engil PDF Editor won't open: {e}.	Осы құжаттағы {who} Mota-Engil PDF Editor ашпайтын адресті ашпақ болды: {e}.
+	{who} in this document tried to open an address Mota-Engil PDF Editor won't open: {e}. Only web (http, https) and email (mailto) links open from documents.	Осы құжаттағы {who} Mota-Engil PDF Editor ашпайтын адресті ашпақ болды: {e}. Құжаттардан тек веб (http, https) және email (mailto) сілтемелері ашылады.
 	Another file dialog is still open. Finish with it first.	Басқа файл сұхбат терезесі әлі ашық тұр. Алдымен оны аяқтаңыз.
 	Couldn't show the file picker. Please try again.	Файл таңдау терезесін көрсету мүмкін болмады. Қайталап көріңіз.
 	The document changed while you were choosing a file, so nothing was changed.	Сіз файл таңдап жатқанда құжат өзгергендіктен, ешнәрсе өзгертілген жоқ.
@@ -2149,7 +2150,7 @@ calendar date	December	Желтоқсан
 	Open a PDF ({key})	PDF ашу ({key})
 	Open arrow	Ашық көрсеткі
 	Pages: {k} of {n}	Беттер: {k}, барлығы {n}
-	Versa PDF is drawing without a graphics processor, so it may be slow. Updating the graphics driver may help.	Versa PDF графикалық процессорсыз сурет салуда, сондықтан баяу жұмыс істеуі мүмкін. Графикалық драйверді жаңарту көмектесуі мүмкін.
+	Mota-Engil PDF Editor is drawing without a graphics processor, so it may be slow. Updating the graphics driver may help.	Mota-Engil PDF Editor графикалық процессорсыз сурет салуда, сондықтан баяу жұмыс істеуі мүмкін. Графикалық драйверді жаңарту көмектесуі мүмкін.
 	Preview unavailable: {e}	Алдын ала көру қолжетімсіз: {e}
 	Previous ({key})	Алдыңғы ({key})
 	Print ({key})	Басып шығару ({key})
@@ -2169,7 +2170,7 @@ calendar date	December	Желтоқсан
 	Slash	Қиғаш сызық
 	Some bookmarks are not shown here: the panel lists a limited number, nested a limited depth.	Кейбір бетбелгілер осында көрсетілмеген: панель шектеулі санды, шектеулі тереңдікке дейін ғана тізеді.
 	Switch to List view to change the pages it takes.	Қамтитын беттерін өзгерту үшін Тізім көрінісіне ауысыңыз.
-	Text recognition isn't installed: its model files are missing. Reinstall Versa PDF, or set PDFCRAFT_MODELS to the folder that holds them.	Мәтінді тану орнатылмаған: модель файлдары жоқ. Versa PDF қайта орнатыңыз немесе PDFCRAFT_MODELS айнымалысына олар жатқан қалтаны көрсетіңіз.
+	Text recognition isn't installed: its model files are missing. Reinstall Mota-Engil PDF Editor, or set PDFCRAFT_MODELS to the folder that holds them.	Мәтінді тану орнатылмаған: модель файлдары жоқ. Mota-Engil PDF Editor қайта орнатыңыз немесе PDFCRAFT_MODELS айнымалысына олар жатқан қалтаны көрсетіңіз.
 	Text used as a clipping path cannot be moved with this selection.	Қиып алу жолы ретінде қолданылатын мәтін бұл таңдаумен жылжытылмайды.
 	The document changed while you were editing field properties.	Өріс сипаттарын түзетіп жүргенде құжат өзгерді.
 	The document is no longer open.	Құжат енді ашық емес.
@@ -2185,7 +2186,7 @@ calendar date	December	Желтоқсан
 	Zoom in ({key})	Үлкейту ({key})
 	Zoom in / out (also pinch or {key}-scroll)	Үлкейту / кішірейту (сонымен қатар қысу немесе {key}-айналдыру)
 	Zoom out ({key})	Кішірейту ({key})
-	the text recognition models are not installed (reinstall Versa PDF, or set PDFCRAFT_MODELS to the folder that holds them)	мәтінді тану модельдері орнатылмаған (Versa PDF қайта орнатыңыз немесе PDFCRAFT_MODELS айнымалысына олар жатқан қалтаны көрсетіңіз)
+	the text recognition models are not installed (reinstall Mota-Engil PDF Editor, or set PDFCRAFT_MODELS to the folder that holds them)	мәтінді тану модельдері орнатылмаған (Mota-Engil PDF Editor қайта орнатыңыз немесе PDFCRAFT_MODELS айнымалысына олар жатқан қалтаны көрсетіңіз)
 	{name} is too large for a word list (at most 1 MB).	{name} сөз тізімі үшін тым үлкен (ең көбі 1 МБ).
 	{n} fields selected	{n} өріс таңдалды
 	{n} word(s) or phrase(s)	{n} сөз немесе тіркес
@@ -2271,8 +2272,8 @@ animation effects	Off	Өшірулі
 	Greyscale	Сұр реңктер
 	Black and white	Ақ-қара
 	This printer's driver doesn't take two-sided settings from other programs, so its own setting applies. Change it in Properties…	Бұл принтердің драйвері басқа бағдарламалардан екі жақты басып шығару баптауларын қабылдамайды, сондықтан өз баптауы қолданылады. Оны мына жерден өзгертіңіз: Сипаттар…
-	This field's font can't draw “{c}” ({code}), so Versa PDF shows ? in its place. The value is saved, and other PDF viewers redraw the field from it.	Бұл өрістің қаріпі «{c}» ({code}) таңбасын сала алмайды, сондықтан Versa PDF оның орнына ? көрсетеді. Мән сақталады, ал басқа PDF қарау құралдары өрісті соған қарап қайта салады.
-	The fonts Versa PDF writes with can't draw “{c}” ({code}), so it shows as ? in every PDF viewer. The text is saved.	Versa PDF жазатын қаріптер «{c}» ({code}) таңбасын сала алмайды, сондықтан ол барлық PDF қарау құралдарында ? болып көрінеді. Мәтін сақталады.
+	This field's font can't draw “{c}” ({code}), so Mota-Engil PDF Editor shows ? in its place. The value is saved, and other PDF viewers redraw the field from it.	Бұл өрістің қаріпі «{c}» ({code}) таңбасын сала алмайды, сондықтан Mota-Engil PDF Editor оның орнына ? көрсетеді. Мән сақталады, ал басқа PDF қарау құралдары өрісті соған қарап қайта салады.
+	The fonts Mota-Engil PDF Editor writes with can't draw “{c}” ({code}), so it shows as ? in every PDF viewer. The text is saved.	Mota-Engil PDF Editor жазатын қаріптер «{c}» ({code}) таңбасын сала алмайды, сондықтан ол барлық PDF қарау құралдарында ? болып көрінеді. Мәтін сақталады.
 	Browser's print dialog	Браузердің басып шығару терезесі
 	Copies, two-sided printing and colour are chosen in the browser's print dialog.	Көшірмелер саны, екі жақты басып шығару және түс браузердің басып шығару терезесінде таңдалады.
 	Preparing {n} sheets for printing…	Басып шығаруға парақтар дайындалуда: {n}…
@@ -2302,7 +2303,7 @@ animation effects	Off	Өшірулі
 @plural	Downloaded {n} PDF|Downloaded {n} PDFs	{n} PDF жүктелді|{n} PDF жүктелді
 @plural	{n} field name collides with earlier files and will be renamed: {list}|{n} field names collide with earlier files and will be renamed: {list}	{n} өріс атауы алдыңғы файлдармен қайшы келеді және қайта аталады: {list}|{n} өріс атауы алдыңғы файлдармен қайшы келеді және қайта аталады: {list}
 	Scan	Сканерлеу
-	Sign a sheet of white paper and take a photo of it in bright, even light (use the flash). Choose the photo or drop it here: Versa PDF finds the signature and removes the paper.	Ақ қағаз парағына қол қойып, оны жарық әрі біркелкі жарықта суретке түсіріңіз (жарқылды қосыңыз). Суретті таңдаңыз немесе осында тастаңыз: Versa PDF қолтаңбаны тауып, қағазды алып тастайды.
+	Sign a sheet of white paper and take a photo of it in bright, even light (use the flash). Choose the photo or drop it here: Mota-Engil PDF Editor finds the signature and removes the paper.	Ақ қағаз парағына қол қойып, оны жарық әрі біркелкі жарықта суретке түсіріңіз (жарқылды қосыңыз). Суретті таңдаңыз немесе осында тастаңыз: Mota-Engil PDF Editor қолтаңбаны тауып, қағазды алып тастайды.
 	Choose photo…	Суретті таңдау…
 	No photo chosen	Сурет таңдалмаған
 	Photo	Сурет

@@ -21,7 +21,7 @@ pub fn exists(name: &str) -> bool {
 }
 
 fn source(name: &str) -> egui::ImageSource<'static> {
-    // Versa PDF caches an unknown name under the resolved fallback name.
+    // Mota-Engil PDF Editor caches an unknown name under the resolved fallback name.
     white_icons().source(white_icons().canonical_name(name).unwrap_or("square"))
 }
 

@@ -200,7 +200,7 @@ pub struct Added {
     pub content: Content,
 }
 
-/// Versa PDF-owned page content discovered in one page/content traversal.
+/// Mota-Engil PDF Editor-owned page content discovered in one page/content traversal.
 #[derive(Clone, Debug, Default, PartialEq)]
 pub struct MarkerScan {
     pub marks: Vec<MarkKind>,
@@ -429,7 +429,7 @@ fn shaped_width(t: &AddedText, s: &str, rtl: bool) -> f64 {
 
 fn arabic_error(e: GlyphError, text: &str) -> EditError {
     EditError::Invalid(match e {
-        GlyphError::NoFont => "Arabic text needs Versa PDF's Arabic font, which this build doesn't include \
+        GlyphError::NoFont => "Arabic text needs Mota-Engil PDF Editor's Arabic font, which this build doesn't include \
                                (to build it in, set CRAFT_FONTS_DIR to a craft-fonts checkout that has an Arab face)"
             .into(),
         GlyphError::Missing => format!("the Arabic font can't show \"{text}\""),
@@ -654,7 +654,7 @@ fn type3_shaped(doc: &mut Document, clusters: &[&ShapedCluster], outlines: &Hash
             },
             |f| f.family,
         ),
-        None => "Versa PDF Shaped Text",
+        None => "Mota-Engil PDF Editor Shaped Text",
     };
     let mut descriptor = Dict::new();
     descriptor.set(b"Type".to_vec(), Object::name("FontDescriptor"));

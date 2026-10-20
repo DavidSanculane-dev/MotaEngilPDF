@@ -3,7 +3,7 @@
 # exports VERSION and NFPM_ARCH.
 #
 #   nfpm package -f packaging/linux/nfpm.yaml -p deb -t dist/release/
-name: versa-pdf
+name: mota-engil-pdf-editor
 arch: ${NFPM_ARCH}
 platform: linux
 version: ${VERSION}
@@ -13,7 +13,7 @@ release: 1
 section: graphics
 priority: optional
 maintainer: ${PDFCRAFT_MAINTAINER}
-vendor: Versa PDF contributors
+vendor: David Sanculane
 homepage: https://github.com/DavidSanculane-dev/pdfcraft
 license: MIT OR Apache-2.0
 description: |-

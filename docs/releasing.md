@@ -1,11 +1,11 @@
-# Releasing Versa PDF
+# Releasing Mota-Engil PDF Editor
 
 Every push to the `release` branch runs `.github/workflows/release.yml`. It builds installers for
 macOS, Windows, Linux, FreeBSD and the web, signs the ones it has certificates for, and creates or
-updates a **draft** GitHub Release named `Versa PDF v<version>`. Nobody sees a draft until a
+updates a **draft** GitHub Release named `Mota-Engil PDF Editor v<version>`. Nobody sees a draft until a
 maintainer publishes it.
 
-The pipeline was ported from PhotoCraft's. User-facing names say **Versa PDF**; release files use
+The pipeline was ported from PhotoCraft's. User-facing names say **Mota-Engil PDF Editor**; release files use
 the `versa-pdf-<version>-<platform>-<arch>.<ext>` prefix and Linux app ID
 `io.github.davidsanculane-dev.versa-pdf`. The executable names (`pdfcraft`, `pdfcraft-cli`) remain
 unchanged for compatibility.
@@ -20,10 +20,10 @@ unchanged for compatibility.
    cargo xtask version set 0.3.0       # or 0.3.0-rc.1; updates Cargo.toml and Cargo.lock
    ```
 
-   Commit the change through the normal review flow (see the `Release: Versa PDF v0.2.1` PR).
+   Commit the change through the normal review flow (see the `Release: Mota-Engil PDF Editor v0.2.1` PR).
 2. **Merge `main` into `release`** (or fast-forward it) and push. The workflow starts by itself.
 3. **Wait for the draft.** When every job has finished (notarization is the slow part), the
-   Releases page has a draft `Versa PDF v0.3.0` targeting the pushed commit, with every artifact
+   Releases page has a draft `Mota-Engil PDF Editor v0.3.0` targeting the pushed commit, with every artifact
    and `SHA256SUMS.txt`. The notes are generated from the merged PRs.
 4. **Check it.** Download an installer or two and read the job summaries. A `::warning::` there
    means a signing secret was missing and that artifact is unsigned.
@@ -76,14 +76,14 @@ deliberately.
 fetch every `kind = "model"` file in `ATTRIBUTION.toml` (verified by SHA-256) with its licence text
 and an `ATTRIBUTION.txt`, straight into the package, so packaging needs the network. They go where
 `pdfcraft_ocr::Models::dirs_beside_exe` looks: `models\` beside `pdfcraft.exe` (MSI, portable zip),
-`Versa PDF.app/Contents/Resources/models` (macOS), and `share/versa-pdf/models` beside `bin/`
+`Mota-Engil PDF Editor.app/Contents/Resources/models` (macOS), and `share/versa-pdf/models` beside `bin/`
 (deb, rpm, tar.gz, AppImage, Flatpak, FreeBSD). The web build doesn't include them yet.
 
 ### macOS
 
 `packaging/macos/package.sh` builds both architectures, joins them with `lipo`, and assembles
-`Versa PDF.app` from `Info.plist.in` (bundle id `io.github.davidsanculane-dev.versa-pdf`, macOS 11+, PDF declared
-as a document type with rank Alternate, so Versa PDF is offered under Open With without taking over
+`Mota-Engil PDF Editor.app` from `Info.plist.in` (bundle id `io.github.davidsanculane-dev.versa-pdf`, macOS 11+, PDF declared
+as a document type with rank Alternate, so Mota-Engil PDF Editor is offered under Open With without taking over
 from Preview). Files opened from Finder arrive as Apple events, which
 `apps/pdfcraft/src/apple_events.rs` receives.
 
@@ -94,7 +94,7 @@ from Preview). Files opened from Finder arrive as Apple events, which
   stapled, and the result is checked with `codesign --verify`, `stapler validate` and `spctl`. The
   app ships on a drag-to-Applications DMG, which is signed and notarized too.
   Its Finder window (background, icon size and positions) comes from
-  [`packaging/macos/dmg/`](../packaging/macos/dmg/README.md), and its volume is named `Versa PDF`
+  [`packaging/macos/dmg/`](../packaging/macos/dmg/README.md), and its volume is named `Mota-Engil PDF Editor`
   without the version, which the window's background needs; the DMG file name keeps the version.
 - **CLI:** `pdfcraft-cli` is signed and notarized as a zip. A bare executable can't hold a stapled
   ticket, so Gatekeeper looks it up online the first time a downloaded copy runs.
@@ -121,11 +121,11 @@ neither the MSI nor the portable zip needs the Visual C++ redistributable.
   this.
 - `installer-ui.wxs` supplies native welcome, maintenance, progress, files-in-use and outcome
   dialogs. Full UI confirms success with Finish; failures and cancellations have distinct messages.
-  The welcome dialog has a "Create a desktop shortcut" checkbox and an "Edit with Versa PDF"
+  The welcome dialog has a "Create a desktop shortcut" checkbox and an "Edit with Mota-Engil PDF Editor"
   right-click menu checkbox, both ticked by default. `/qn` and `/qb` stay unattended and create
   both unless `INSTALLDESKTOPSHORTCUT=0` or `INSTALLPDFCONTEXTMENU=0` is passed.
 - The PDF right-click entry (#682) is a classic verb under
-  `HKLM\Software\Classes\SystemFileAssociations\.pdf\shell\Versa PDF.Edit`, so it shows whichever app
+  `HKLM\Software\Classes\SystemFileAssociations\.pdf\shell\Mota-Engil PDF Editor.Edit`, so it shows whichever app
   is the default for `.pdf` and never changes that default. Several selected PDFs (up to 15, the
   limit for a `Document` verb) start one `pdfcraft.exe "<file>"` each, and the single-instance
   hand-off opens them as tabs. On Windows 11 it is under "Show more options"; a first-level entry
@@ -235,7 +235,7 @@ a match of the `CobaltStrikeBeacon` family rule.
    portable zip, not only the outer installer. `7z x -oDIR versa-pdf-<version>-windows-x64.msi`
    extracts them. The payload names are WiX-internal, so tell the executables apart by their file
    type. Don't install or run the MSI or the extracted files.
-4. **Scan with YARA and keep every match.** Use your own copies of YARA and the rule. Versa PDF
+4. **Scan with YARA and keep every match.** Use your own copies of YARA and the rule. Mota-Engil PDF Editor
    bundles neither, and the helper never runs in the app, the installer or CI:
 
    ```powershell
@@ -252,8 +252,8 @@ a match of the `CobaltStrikeBeacon` family rule.
    distinctive code or strings, and it does not show that the software belongs to the family. Rules
    change too: CAPEv2 commit `9b599185` (2024-12-05) lengthened this rule's two repeated-byte patterns
    from 4 to 16 bytes to reduce false positives, so an older rule revision can match files that the
-   current one does not. Don't alter Versa PDF's binaries to change a scanner's result. That changes
+   current one does not. Don't alter Mota-Engil PDF Editor's binaries to change a scanner's result. That changes
    nothing about the software.
 7. **Report.** To the scanner, send the file's SHA-256, the release URL, the rule name and revision,
-   and the matched identifiers and offsets. Report Versa PDF problems at
+   and the matched identifiers and offsets. Report Mota-Engil PDF Editor problems at
    <https://github.com/DavidSanculane-dev/pdfcraft/issues> with the same facts.

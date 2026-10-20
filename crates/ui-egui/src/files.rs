@@ -132,7 +132,7 @@ impl Default for SplitDraft {
     }
 }
 
-/// Acrobat's Split by: number of pages, file size, top-level bookmarks (and Versa PDF's
+/// Acrobat's Split by: number of pages, file size, top-level bookmarks (and Mota-Engil PDF Editor's
 /// before-selected-pages).
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum SplitMode {

@@ -13,9 +13,9 @@ fn main() {
         return;
     }
     let mut res = winresource::WindowsResource::new();
-    res.set("ProductName", "Versa PDF")
-        .set("FileDescription", "Versa PDF command-line tool")
-        .set("LegalCopyright", "Copyright (c) 2026 ArtCraft Team and PdfCraft contributors; Versa PDF contributors.")
+    res.set("ProductName", "Mota-Engil PDF Editor")
+        .set("FileDescription", "Mota-Engil PDF Editor command-line tool")
+        .set("LegalCopyright", "Copyright (c) 2026 ArtCraft Team and PdfCraft contributors; Mota-Engil PDF Editor rebrand by David Sanculane.")
         .set("OriginalFilename", "pdfcraft-cli.exe")
         .set("InternalName", "pdfcraft-cli");
     if let Err(e) = res.compile() {

@@ -1,4 +1,4 @@
-//! Asks GitHub for the latest Versa PDF release (Help ▸ Check for updates, issue #28).
+//! Asks GitHub for the latest Mota-Engil PDF Editor release (Help ▸ Check for updates, issue #28).
 
 use std::time::Duration;
 
@@ -17,7 +17,7 @@ pub fn latest_release() -> Result<Release, String> {
     let mut response = agent
         .get(LATEST)
         .header("Accept", "application/vnd.github+json")
-        .header("User-Agent", concat!("Versa PDF/", env!("CARGO_PKG_VERSION")))
+        .header("User-Agent", concat!("Mota-Engil PDF Editor/", env!("CARGO_PKG_VERSION")))
         // Read error statuses ourselves: a 403 from GitHub usually means its anonymous
         // rate limit ran out, and the retry time rides along in a response header.
         .config()

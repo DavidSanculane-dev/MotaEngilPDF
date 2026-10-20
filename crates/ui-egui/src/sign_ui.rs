@@ -22,7 +22,7 @@ pub struct DigitalIdEntry {
     pub issuer: String,
     pub email: String,
     pub expires: String,
-    /// Why the ID can't sign (a Windows store certificate whose key Versa PDF can't use): shown
+    /// Why the ID can't sign (a Windows store certificate whose key Mota-Engil PDF Editor can't use): shown
     /// greyed with the reason, and never selectable.
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub unusable: Option<String>,
@@ -182,7 +182,7 @@ pub(crate) fn page_input(ui: &egui::Ui, resp: &egui::Response, xf: &PageXform, p
     }
 }
 
-/// Where new digital IDs are saved: next to the recovery folder (`…/Versa PDF/Digital IDs`, or
+/// Where new digital IDs are saved: next to the recovery folder (`…/Mota-Engil PDF Editor/Digital IDs`, or
 /// `PdfCraftData/Digital IDs` in portable mode).
 fn id_dir() -> Option<PathBuf> {
     crate::recovery::RecoveryStore::default_dir().and_then(|d| d.parent().map(|p| p.join("Digital IDs")))
@@ -894,9 +894,9 @@ fn sign_as(ui: &mut egui::Ui, app: &mut PdfCraftApp, t: &Tokens) -> bool {
             ui.label("");
             ui.label(
                 egui::RichText::new(if entry.path.starts_with("windows:") {
-                    tl!("The key is in the Windows certificate store, which may ask to allow Versa PDF to use it.")
+                    tl!("The key is in the Windows certificate store, which may ask to allow Mota-Engil PDF Editor to use it.")
                 } else {
-                    tl!("The key is in the macOS Keychain, which may ask to allow Versa PDF to use it.")
+                    tl!("The key is in the macOS Keychain, which may ask to allow Mota-Engil PDF Editor to use it.")
                 })
                 .small()
                 .color(t.text_muted),

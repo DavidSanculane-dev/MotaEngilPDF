@@ -356,10 +356,10 @@ pub const COMMANDS: &[CommandSpec] = &[
     c("page.split", "Split document…", PAGES, None, Assembly, "scissors"),
     c("page.number", "Number pages…", PAGES, None, Assembly, "hash"),
     c("help.shortcuts", "Keyboard shortcuts", HELP, None, Nothing, "circle-help"),
-    c("help.github", "Versa PDF on GitHub", HELP, None, Nothing, "code-xml"),
+    c("help.github", "Mota-Engil PDF Editor on GitHub", HELP, None, Nothing, "code-xml"),
     c("help.issues", "Report an issue", HELP, None, Nothing, "message-square"),
     c("help.check_updates", "Check for updates…", HELP, None, Nothing, "cloud"),
-    c("help.about", "About Versa PDF", HELP, None, Nothing, "info"),
+    c("help.about", "About Mota-Engil PDF Editor", HELP, None, Nothing, "info"),
 ];
 
 pub fn command(id: &str) -> Option<&'static CommandSpec> {

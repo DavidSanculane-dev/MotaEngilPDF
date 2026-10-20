@@ -22,9 +22,9 @@ fn main() {
     res.set_icon("../../assets/app-icon/pdfcraft.ico")
         .set_icon_with_id("../../assets/app-icon/pdfcraft-document.ico", "2")
         .set_manifest(windows_manifest::WINDOWS_MANIFEST)
-        .set("ProductName", "Versa PDF")
-        .set("FileDescription", "Versa PDF workbench")
-        .set("LegalCopyright", "Copyright (c) 2026 ArtCraft Team and PdfCraft contributors; Versa PDF contributors")
+        .set("ProductName", "Mota-Engil PDF Editor")
+        .set("FileDescription", "Mota-Engil PDF Editor")
+        .set("LegalCopyright", "Copyright (c) 2026 ArtCraft Team and PdfCraft contributors; Mota-Engil PDF Editor rebrand by David Sanculane")
         .set("OriginalFilename", "pdfcraft.exe")
         .set("InternalName", "pdfcraft.exe");
     if let Err(e) = res.compile() {

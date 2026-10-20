@@ -152,7 +152,7 @@ pub enum Request {
     /// `this.pageNum = n` (0-based).
     GoToPage(usize),
     LaunchUrl(String),
-    /// `this.submitForm(url)`: never sent on Versa PDF's own.
+    /// `this.submitForm(url)`: never sent on Mota-Engil PDF Editor's own.
     Submit(String),
     /// `field.setFocus()`.
     Focus(String),

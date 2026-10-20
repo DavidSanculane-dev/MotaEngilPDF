@@ -40,7 +40,7 @@ pub enum RedactError {
     /// A mark's overlay text has a character Helvetica can't draw; nothing was redacted.
     #[error("{0}")]
     Undrawable(String),
-    #[error("page {0} has vertical-writing text under a redaction mark, which Versa PDF cannot remove yet, so nothing was changed")]
+    #[error("page {0} has vertical-writing text under a redaction mark, which Mota-Engil PDF Editor cannot remove yet, so nothing was changed")]
     VerticalText(usize),
     #[error(transparent)]
     Edit(#[from] pdfcraft_edit::EditError),
@@ -429,7 +429,7 @@ pub fn apply(doc: &mut Document, pages: Option<&[usize]>) -> Result<Report, Reda
     // rebuilds fields and pages from that packet, so deleting the AcroForm field alone leaves the
     // redacted value in the file and lets a later relayout put it back. Once redactions are
     // applied the form stops being XFA: drop /AcroForm /XFA (template and datasets), the catalog's
-    // /NeedsRendering, and Versa PDF's own layout mark (pdfcraft_xfa::LAYOUT_KEY), leaving a plain
+    // /NeedsRendering, and Mota-Engil PDF Editor's own layout mark (pdfcraft_xfa::LAYOUT_KEY), leaving a plain
     // already-laid-out AcroForm that neither the saved file nor a relayout can restore from.
     if let Some(root) = doc.root() {
         let strip_xfa = |d: &mut Dict| {

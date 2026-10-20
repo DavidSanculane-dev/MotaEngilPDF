@@ -1,4 +1,4 @@
-//! Versa PDF's source and issue tracker. One table keeps the Help menu and automation commands in sync.
+//! Product links. One table keeps the Help menu and automation commands in sync.
 
 use icu_properties::props::Script;
 use std::path::{Path, PathBuf};
@@ -6,6 +6,7 @@ use std::path::{Path, PathBuf};
 pub const GITHUB: &str = "https://github.com/DavidSanculane-dev/pdfcraft";
 pub const ISSUES: &str = "https://github.com/DavidSanculane-dev/pdfcraft/issues";
 pub const APP_PAGE: &str = GITHUB;
+pub const CREATOR_LINKEDIN: &str = "https://www.linkedin.com/in/david-sanculane-143b4141/?isSelfProfile=true";
 
 /// A link and the registry command that opens it.
 #[derive(Clone, Copy, Debug)]
@@ -19,7 +20,7 @@ pub struct Link {
 
 /// In the order shown in the Help menu.
 pub const LINKS: &[Link] = &[
-    Link { command: "help.github", label: "Versa PDF on GitHub", url: GITHUB, icon: "code-xml" },
+    Link { command: "help.github", label: "Mota-Engil PDF Editor on GitHub", url: GITHUB, icon: "code-xml" },
     Link { command: "help.issues", label: "Report an issue", url: ISSUES, icon: "message-square" },
 ];
 
@@ -27,7 +28,7 @@ pub fn for_command(id: &str) -> Option<&'static Link> {
     LINKS.iter().find(|l| l.command == id)
 }
 
-/// The kinds of address a document may ask Versa PDF to open: web pages and email. Anything
+/// The kinds of address a document may ask Mota-Engil PDF Editor to open: web pages and email. Anything
 /// else (`file:`, `javascript:`, `data:`, `smb:`, app handlers such as `ms-settings:`) is refused,
 /// because the operating system would hand it to whichever program claims it (#90, #91).
 pub const DOCUMENT_SCHEMES: &[&str] = &["https", "http", "mailto"];
@@ -81,8 +82,8 @@ fn hides_text(c: char) -> bool {
 }
 
 /// Check an address that came from a document (a link, a button's URI action or a script's
-/// `app.launchURL`) before Versa PDF offers to open it. Returns the address trimmed of
-/// surrounding whitespace. Versa PDF's own links (Help, About, updates) don't come through here.
+/// `app.launchURL`) before Mota-Engil PDF Editor offers to open it. Returns the address trimmed of
+/// surrounding whitespace. Mota-Engil PDF Editor's own links (Help, About, updates) don't come through here.
 pub fn document_url(raw: &str) -> Result<String, BlockedLink> {
     let url = raw.trim();
     if url.is_empty() {
@@ -241,7 +242,7 @@ const MAIL_DECODE_LAYERS: usize = 8;
 /// argument). The check is repeated after each layer of percent-decoding (KMail decodes names, so
 /// `%61ttach` is `attach`). A word without `=` (`Please attach the invoice`) is fine.
 ///
-/// The address is refused, not stripped of the parameter: Versa PDF never rewrites what a document
+/// The address is refused, not stripped of the parameter: Mota-Engil PDF Editor never rewrites what a document
 /// asks to open, and a stripped address could still be read differently by some email app.
 fn check_mail_parameters(rest: &str) -> Result<(), BlockedLink> {
     let mut text = rest.to_string();

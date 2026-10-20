@@ -10,12 +10,12 @@ use super::pdf::{Content, Font, Fonts, Stamp, colors, name, text};
 /// Links to this prefix in showcase.html mark where annotations go.
 const MARKER_PREFIX: &str = "https://mark.pdfcraft.invalid/";
 
-const TITLE: &str = "Versa PDF Showcase";
-const AUTHOR: &str = "Versa PDF";
+const TITLE: &str = "Mota-Engil PDF Editor Showcase";
+const AUTHOR: &str = "Mota-Engil PDF Editor";
 const SUBJECT: &str = "A specimen document exercising typography, world scripts, vector graphics, \
                        MathML, forms, annotations, layers and attachments.";
-const KEYWORDS: &[&str] = &["PDF", "typography", "OpenType", "AcroForm", "annotations", "optional content", "Versa PDF"];
-const CREATOR: &str = "Versa PDF showcase";
+const KEYWORDS: &[&str] = &["PDF", "typography", "OpenType", "AcroForm", "annotations", "optional content", "Mota-Engil PDF Editor"];
+const CREATOR: &str = "Mota-Engil PDF Editor showcase";
 
 /// Chrome-printed page indices (0-based) that the post-processor refers to.
 const PAGE_CONTENTS: usize = 1;
@@ -376,7 +376,7 @@ fn decode_text(bytes: &[u8]) -> String {
 fn tidy_title(title: &str) -> String {
     const ACRONYMS: &[&str] = &["PDF"];
     // Chrome drops the <br> between the two lines of the cover title.
-    if title == "VersaPDFShowcase" {
+    if title == "Mota-EngilPDFEditorShowcase" {
         return TITLE.to_string();
     }
     let title = title.split_whitespace().collect::<Vec<_>>().join(" ");

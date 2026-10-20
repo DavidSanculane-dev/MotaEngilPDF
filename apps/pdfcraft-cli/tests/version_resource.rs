@@ -33,9 +33,9 @@ fn the_exe_has_version_info_with_the_package_version() {
     let start = find(&exe, &utf16("VS_VERSION_INFO")).expect("no version resource");
     let resource = &exe[start..];
     for (key, value) in [
-        ("ProductName", "Versa PDF"),
-        ("FileDescription", "Versa PDF command-line tool"),
-        ("LegalCopyright", "Copyright (c) 2026 ArtCraft Team and PdfCraft contributors; Versa PDF contributors."),
+        ("ProductName", "Mota-Engil PDF Editor"),
+        ("FileDescription", "Mota-Engil PDF Editor command-line tool"),
+        ("LegalCopyright", "Copyright (c) 2026 ArtCraft Team and PdfCraft contributors; Mota-Engil PDF Editor rebrand by David Sanculane."),
         ("OriginalFilename", "pdfcraft-cli.exe"),
         ("InternalName", "pdfcraft-cli"),
         ("FileVersion", env!("CARGO_PKG_VERSION")),

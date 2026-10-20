@@ -15,7 +15,7 @@
 # localisation or any other product's translation. Terminology: annotations are "komentáře",
 # pages are "stránky", form fields are "formulářová pole", redaction is "začernění", flattening is
 # "sloučení se stránkou", tags are "tagy" (to tag = "označkovat"). Product and format names
-# (Versa PDF, PDF, PDF/A, OCR, XFA, Word, HTML…) stay in Latin letters; the trailing "…" of dialog
+# (Mota-Engil PDF Editor, PDF, PDF/A, OCR, XFA, Word, HTML…) stay in Latin letters; the trailing "…" of dialog
 # commands is kept. Messages with a count but no `@plural` entry use count-neutral wording
 # ("Vybráno stránek: {n}"), because Czech has three plural forms.
 
@@ -114,10 +114,11 @@
 	Split document…	Rozdělit dokument…
 	Number pages…	Očíslovat stránky…
 	Keyboard shortcuts	Klávesové zkratky
-	Versa PDF web page	Webová stránka Versa PDF
-	Versa PDF on GitHub	Versa PDF na GitHubu
+	Mota-Engil PDF Editor web page	Webová stránka Mota-Engil PDF Editor
+	Mota-Engil PDF Editor on GitHub	Mota-Engil PDF Editor na GitHubu
+	Report an issue	Nahlásit problém
 	Check for updates…	Zkontrolovat aktualizace…
-	About Versa PDF	O aplikaci Versa PDF
+	About Mota-Engil PDF Editor	O aplikaci Mota-Engil PDF Editor
 	Auto	Automaticky
 	Continuous scrolling	Plynulé posouvání
 	Single page	Jednostránkové zobrazení
@@ -131,7 +132,7 @@
 	Fit to width scrolling	Plynulé posouvání s přizpůsobením šířce
 	Fit one full page	Celá jedna stránka
 	Used when a PDF doesn't ask for a layout or zoom. Continuous scrolling never snaps between pages.	Používá se, když PDF nepožaduje rozložení ani zvětšení. Plynulé posouvání mezi stránkami neskáče.
-	Reopen the files that were open when Versa PDF last closed	Znovu otevřít soubory, které byly otevřené při posledním zavření aplikace Versa PDF
+	Reopen the files that were open when Mota-Engil PDF Editor last closed	Znovu otevřít soubory, které byly otevřené při posledním zavření aplikace Mota-Engil PDF Editor
 	Reload documents when their files change on disk	Znovu načítat dokumenty při změně jejich souborů na disku
 	This file changed on disk. Reload it to see the new version; your unsaved changes will be lost.	Tento soubor se na disku změnil. Znovu jej načtěte, abyste viděli novou verzi; neuložené změny budou ztraceny.
 	Reload	Znovu načíst
@@ -139,7 +140,7 @@
 	Choose a PNG or JPEG image (up to 4 MiB). Transparency is preserved.	Vyberte obrázek PNG nebo JPEG (nejvýše 4 MiB). Průhlednost bude zachována.
 	Couldn't import the signature image: {e}	Obrázek podpisu nelze importovat: {e}
 	Portable mode is off: {folder} can't be written ({error}). Settings are kept in your user folder instead.	Přenosný režim je vypnutý: do složky {folder} nelze zapisovat ({error}). Nastavení se místo toho ukládá do vaší uživatelské složky.
-	Versa PDF is drawing without a graphics processor, so it may be slow. Updating the graphics driver may help.	Versa PDF vykresluje bez grafického procesoru, takže může být pomalý. Pomoci může aktualizace grafického ovladače.
+	Mota-Engil PDF Editor is drawing without a graphics processor, so it may be slow. Updating the graphics driver may help.	Mota-Engil PDF Editor vykresluje bez grafického procesoru, takže může být pomalý. Pomoci může aktualizace grafického ovladače.
 	Go to page…	Přejít na stránku…
 	Margins	Okraje
 	For page sizes and margins.	Pro velikosti stránek a okraje.
@@ -273,15 +274,15 @@ key	Space	Mezerník
 	Next page	Další stránka
 	Previous page	Předchozí stránka
 	Current page — type a page number or label (such as iv) and press Enter	Aktuální stránka — zadejte číslo nebo označení stránky (třeba iv) a stiskněte Enter
-	Welcome to Versa PDF	Vítá vás Versa PDF
+	Welcome to Mota-Engil PDF Editor	Vítá vás Mota-Engil PDF Editor
 	An open-source PDF workbench — local, private, and scriptable.	Open-source dílna pro PDF — lokální, soukromá a skriptovatelná.
 	Recommended tools	Doporučené nástroje
 	Use now	Použít
 	Open file	Otevřít soubor
 	Recent	Nedávné
-	Files you open in Versa PDF appear here. Drop a PDF anywhere to open it.	Zde se zobrazí soubory, které otevřete v aplikaci Versa PDF. Soubor PDF otevřete přetažením kamkoli do okna.
+	Files you open in Mota-Engil PDF Editor appear here. Drop a PDF anywhere to open it.	Zde se zobrazí soubory, které otevřete v aplikaci Mota-Engil PDF Editor. Soubor PDF otevřete přetažením kamkoli do okna.
 	Privacy	Soukromí
-	Versa PDF works offline. No telemetry, no account, and no cloud processing unless you add a provider.	Versa PDF funguje offline. Žádná telemetrie, žádný účet a žádné zpracování v cloudu, pokud nepřidáte poskytovatele.
+	Mota-Engil PDF Editor works offline. No telemetry, no account, and no cloud processing unless you add a provider.	Mota-Engil PDF Editor funguje offline. Žádná telemetrie, žádný účet a žádné zpracování v cloudu, pokud nepřidáte poskytovatele.
 	Scripts run in a sandbox without file or network access. With JavaScript off, Acrobat's standard format, validate and calculate functions still work.	Skripty běží v izolovaném prostředí bez přístupu k souborům a síti. S vypnutým JavaScriptem dál fungují standardní funkce Acrobatu pro formátování, ověření a výpočty.
 	Back to all tools	Zpět na všechny nástroje
 	Close panel	Zavřít panel
@@ -839,9 +840,9 @@ key	Space	Mezerník
 	Check for updates	Zkontrolovat aktualizace
 	No check has run yet.	Kontrola zatím neproběhla.
 	Checking for a newer version…	Hledání novější verze…
-	Versa PDF {v} is available.	Je k dispozici Versa PDF {v}.
+	Mota-Engil PDF Editor {v} is available.	Je k dispozici Mota-Engil PDF Editor {v}.
 	You have version {c}. Download the new version from its release page.	Máte verzi {c}. Novou verzi si stáhněte z její stránky s vydáním.
-	Versa PDF {c} is up to date.	Versa PDF {c} je aktuální.
+	Mota-Engil PDF Editor {c} is up to date.	Mota-Engil PDF Editor {c} je aktuální.
 	Couldn't check for updates: {e}	Aktualizace nelze zkontrolovat: {e}
 	You have version {c}. All releases are listed at {page}.	Máte verzi {c}. Všechna vydání najdete na {page}.
 	Asks GitHub for the latest release. Nothing is downloaded or installed automatically.	Zjistí na GitHubu nejnovější vydání. Nic se automaticky nestahuje ani neinstaluje.
@@ -953,8 +954,8 @@ key	Space	Mezerník
 	No changes allowed	Nejsou povoleny žádné změny
 	Annotations, form fill-in, and digital signatures	Anotace, vyplňování formulářů a digitální podpisy
 	Form fill-in and digital signatures	Vyplňování formulářů a digitální podpisy
-	The key is in the macOS Keychain, which may ask to allow Versa PDF to use it.	Klíč je v Klíčence systému macOS, která se může zeptat, zda aplikaci Versa PDF povolit použití klíče.
-	The key is in the Windows certificate store, which may ask to allow Versa PDF to use it.	Klíč je v úložišti certifikátů Windows, které se může zeptat, zda aplikaci Versa PDF povolit použití klíče.
+	The key is in the macOS Keychain, which may ask to allow Mota-Engil PDF Editor to use it.	Klíč je v Klíčence systému macOS, která se může zeptat, zda aplikaci Mota-Engil PDF Editor povolit použití klíče.
+	The key is in the Windows certificate store, which may ask to allow Mota-Engil PDF Editor to use it.	Klíč je v úložišti certifikátů Windows, které se může zeptat, zda aplikaci Mota-Engil PDF Editor povolit použití klíče.
 	Digital ID password	Heslo digitálního ID
 	Back	Zpět
 	Validate all	Ověřit vše
@@ -1307,7 +1308,7 @@ key	Space	Mezerník
 	Downsample to	Převzorkovat na
 	Also recognize pages that already have text	Rozpoznat i stránky, které už obsahují text
 	Pictures on those pages are recognized too; words already in the page's text are not added again	Rozpoznají se i obrázky na těchto stránkách; slova, která už jsou v textu stránky, se znovu nepřidají
-	Text recognition isn't installed: its model files are missing. Reinstall Versa PDF, or set PDFCRAFT_MODELS to the folder that holds them.	Rozpoznávání textu není nainstalováno: chybí soubory jeho modelů. Přeinstalujte Versa PDF nebo nastavte PDFCRAFT_MODELS na složku, ve které jsou.
+	Text recognition isn't installed: its model files are missing. Reinstall Mota-Engil PDF Editor, or set PDFCRAFT_MODELS to the folder that holds them.	Rozpoznávání textu není nainstalováno: chybí soubory jeho modelů. Přeinstalujte Mota-Engil PDF Editor nebo nastavte PDFCRAFT_MODELS na složku, ve které jsou.
 	Settings	Nastavení
 	Optional	Volitelné
 	Planned · {m}	Plánováno · {m}
@@ -1451,7 +1452,7 @@ key	Space	Mezerník
 	Anyone opening the document will need this password. It's applied when you save.	Každý, kdo dokument otevře, bude potřebovat toto heslo. Použije se při uložení.
 	The document opens without a password; this password is needed to change the restrictions. It's applied when you save.	Dokument se otevře bez hesla; toto heslo je potřeba ke změně omezení. Použije se při uložení.
 	Recover unsaved documents?	Obnovit neuložené dokumenty?
-	Versa PDF didn't shut down normally. These documents had changes that were autosaved:	Versa PDF nebyl řádně ukončen. V těchto dokumentech byly změny, které se automaticky uložily:
+	Mota-Engil PDF Editor didn't shut down normally. These documents had changes that were autosaved:	Mota-Engil PDF Editor nebyl řádně ukončen. V těchto dokumentech byly změny, které se automaticky uložily:
 	just now	právě teď
 	{n} min ago	před {n} min
 	{n} h ago	před {n} h
@@ -1607,10 +1608,10 @@ key	Space	Mezerník
 	On the web, open or drop an image to convert it	Na webu obrázek k převodu otevřete nebo přetáhněte
 	Couldn't optimize the file: {e}	Soubor nelze optimalizovat: {e}
 	Couldn't write {path}: {e}	Nelze zapsat {path}: {e}
-	The form asks to be submitted to {u}; Versa PDF doesn't send form data. Save the document to keep your entries.	Formulář žádá o odeslání na {u}; Versa PDF data formulářů neodesílá. Své údaje zachováte uložením dokumentu.
+	The form asks to be submitted to {u}; Mota-Engil PDF Editor doesn't send form data. Save the document to keep your entries.	Formulář žádá o odeslání na {u}; Mota-Engil PDF Editor data formulářů neodesílá. Své údaje zachováte uložením dokumentu.
 	This PDF uses the unsupported {s} action.	Tento PDF používá nepodporovanou akci {s}.
 	{name}: the {other} action isn't supported yet	{name}: akce {other} zatím není podporována
-	{name} submits the form to {url}; Versa PDF doesn't send form data. Save the document to keep your entries.	{name} odesílá formulář na {url}; Versa PDF data formulářů neodesílá. Své údaje zachováte uložením dokumentu.
+	{name} submits the form to {url}; Mota-Engil PDF Editor doesn't send form data. Save the document to keep your entries.	{name} odesílá formulář na {url}; Mota-Engil PDF Editor data formulářů neodesílá. Své údaje zachováte uložením dokumentu.
 	Export stopped: {e}	Export byl zastaven: {e}
 	Exported 1 image	Exportován 1 obrázek
 	Exported {n} images	Exportováno obrázků: {n}
@@ -1818,8 +1819,8 @@ key	Space	Mezerník
 	Signed and all signatures are valid.	Podepsáno a všechny podpisy jsou platné.
 	At least one signature has problems.	Alespoň jeden podpis má problémy.
 	This document is secured. Some changes are restricted by its security settings.	Tento dokument je zabezpečený. Některé změny omezuje jeho nastavení zabezpečení.
-	This is a dynamic XFA form, which Versa PDF can't display yet. What you see is the file's placeholder page.	Toto je dynamický formulář XFA, který Versa PDF zatím neumí zobrazit. Vidíte zástupnou stránku souboru.
-	This form also contains XFA data, which Versa PDF doesn't read yet. You can fill its fields, but Acrobat may show the XFA values instead.	Tento formulář obsahuje také data XFA, která Versa PDF zatím nečte. Pole můžete vyplnit, ale Acrobat může místo nich zobrazit hodnoty XFA.
+	This is a dynamic XFA form, which Mota-Engil PDF Editor can't display yet. What you see is the file's placeholder page.	Toto je dynamický formulář XFA, který Mota-Engil PDF Editor zatím neumí zobrazit. Vidíte zástupnou stránku souboru.
+	This form also contains XFA data, which Mota-Engil PDF Editor doesn't read yet. You can fill its fields, but Acrobat may show the XFA values instead.	Tento formulář obsahuje také data XFA, která Mota-Engil PDF Editor zatím nečte. Pole můžete vyplnit, ale Acrobat může místo nich zobrazit hodnoty XFA.
 	This document contains {n} interactive form fields.	Tento dokument obsahuje interaktivní formulářová pole (počet: {n}).
 	This file was damaged and has been repaired. Saving keeps the repaired version.	Tento soubor byl poškozený a byl opraven. Uložením se zachová opravená verze.
 	Dismiss	Zavřít
@@ -1868,7 +1869,7 @@ key	Space	Mezerník
 	there are no pages to print	nejsou žádné stránky k tisku
 	the document has no tags	dokument nemá žádné tagy
 	{0}: {1}	{0}: {1}
-	the text recognition models are not installed (reinstall Versa PDF, or set PDFCRAFT_MODELS to the folder that holds them)	modely pro rozpoznávání textu nejsou nainstalované (přeinstalujte Versa PDF nebo nastavte PDFCRAFT_MODELS na složku, ve které jsou)
+	the text recognition models are not installed (reinstall Mota-Engil PDF Editor, or set PDFCRAFT_MODELS to the folder that holds them)	modely pro rozpoznávání textu nejsou nainstalované (přeinstalujte Mota-Engil PDF Editor nebo nastavte PDFCRAFT_MODELS na složku, ve které jsou)
 	the image is empty	obrázek je prázdný
 	this file isn't XFDF, FDF, XML or text form data	tento soubor neobsahuje data formuláře ve formátu XFDF, FDF, XML ani v textovém
 	nothing in the file matches this document	nic v souboru neodpovídá tomuto dokumentu
@@ -2170,8 +2171,8 @@ calendar date	December	prosince
 	A link	Odkaz
 	A button	Tlačítko
 	A script	Skript
-	{who} in this document tried to open an address Versa PDF won't open: {e}.	Pokus o otevření adresy, kterou Versa PDF neotevře ({who} v tomto dokumentu): {e}.
-	{who} in this document tried to open an address Versa PDF won't open: {e}. Only web (http, https) and email (mailto) links open from documents.	Pokus o otevření adresy, kterou Versa PDF neotevře ({who} v tomto dokumentu): {e}. Z dokumentů se otevírají jen webové (http, https) a e-mailové (mailto) odkazy.
+	{who} in this document tried to open an address Mota-Engil PDF Editor won't open: {e}.	Pokus o otevření adresy, kterou Mota-Engil PDF Editor neotevře ({who} v tomto dokumentu): {e}.
+	{who} in this document tried to open an address Mota-Engil PDF Editor won't open: {e}. Only web (http, https) and email (mailto) links open from documents.	Pokus o otevření adresy, kterou Mota-Engil PDF Editor neotevře ({who} v tomto dokumentu): {e}. Z dokumentů se otevírají jen webové (http, https) a e-mailové (mailto) odkazy.
 	Another file dialog is still open. Finish with it first.	Je stále otevřené jiné dialogové okno se soubory. Nejdřív ho dokončete.
 	Couldn't show the file picker. Please try again.	Výběr souborů nelze zobrazit. Zkuste to prosím znovu.
 	The document changed while you were choosing a file, so nothing was changed.	Dokument se změnil, zatímco jste vybírali soubor, proto se nic nezměnilo.
@@ -2358,8 +2359,8 @@ animation effects	Off	Vypnuto
 	Change the colour of line art as well as text	Změnit barvu i čar, ne jen textu
 	Colours are remapped while rendering; the document itself never changes.	Barvy se mění při vykreslování; samotný dokument se nikdy nemění.
 	This printer's driver doesn't take two-sided settings from other programs, so its own setting applies. Change it in Properties…	Ovladač této tiskárny nepřijímá nastavení oboustranného tisku z jiných programů, proto platí jeho vlastní nastavení. Změňte ho ve Vlastnosti…
-	This field's font can't draw “{c}” ({code}), so Versa PDF shows ? in its place. The value is saved, and other PDF viewers redraw the field from it.	Písmo tohoto pole neumí zobrazit „{c}“ ({code}), proto Versa PDF místo něj ukazuje ?. Hodnota se uloží a jiné prohlížeče PDF pole podle ní překreslí.
-	The fonts Versa PDF writes with can't draw “{c}” ({code}), so it shows as ? in every PDF viewer. The text is saved.	Písma, kterými Versa PDF píše, neumí zobrazit „{c}“ ({code}), proto se ve všech prohlížečích PDF zobrazí jako ?. Text se uloží.
+	This field's font can't draw “{c}” ({code}), so Mota-Engil PDF Editor shows ? in its place. The value is saved, and other PDF viewers redraw the field from it.	Písmo tohoto pole neumí zobrazit „{c}“ ({code}), proto Mota-Engil PDF Editor místo něj ukazuje ?. Hodnota se uloží a jiné prohlížeče PDF pole podle ní překreslí.
+	The fonts Mota-Engil PDF Editor writes with can't draw “{c}” ({code}), so it shows as ? in every PDF viewer. The text is saved.	Písma, kterými Mota-Engil PDF Editor píše, neumí zobrazit „{c}“ ({code}), proto se ve všech prohlížečích PDF zobrazí jako ?. Text se uloží.
 	Browser's print dialog	Dialog tisku prohlížeče
 	Copies, two-sided printing and colour are chosen in the browser's print dialog.	Počet kopií, oboustranný tisk a barva se volí v dialogu tisku prohlížeče.
 	Preparing {n} sheets for printing…	Příprava {n} listů k tisku…
@@ -2388,7 +2389,7 @@ animation effects	Off	Vypnuto
 	no output folder was chosen	nebyla vybrána výstupní složka
 @plural	Downloaded {n} PDF|Downloaded {n} PDFs	Stažen {n} soubor PDF|Staženy {n} soubory PDF|Staženo {n} souborů PDF
 	Scan	Skenovat
-	Sign a sheet of white paper and take a photo of it in bright, even light (use the flash). Choose the photo or drop it here: Versa PDF finds the signature and removes the paper.	Podepište se na bílý list papíru a vyfoťte ho při jasném, rovnoměrném světle (použijte blesk). Vyberte fotografii nebo ji sem přetáhněte: Versa PDF najde podpis a odstraní papír.
+	Sign a sheet of white paper and take a photo of it in bright, even light (use the flash). Choose the photo or drop it here: Mota-Engil PDF Editor finds the signature and removes the paper.	Podepište se na bílý list papíru a vyfoťte ho při jasném, rovnoměrném světle (použijte blesk). Vyberte fotografii nebo ji sem přetáhněte: Mota-Engil PDF Editor najde podpis a odstraní papír.
 	Choose photo…	Vybrat fotografii…
 	No photo chosen	Není vybrána žádná fotografie
 	Photo	Fotografie

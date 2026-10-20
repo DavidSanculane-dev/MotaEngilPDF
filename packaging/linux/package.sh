@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
-# Build and package Versa PDF for Linux (<arch> is x86_64 or aarch64, or riscv64 when cross-compiling):
+# Build and package Mota-Engil PDF Editor for Linux (<arch> is x86_64 or aarch64, or riscv64 when cross-compiling):
 #
-#   $DIST/versa-pdf-<version>-linux-<arch>.AppImage  any distro with glibc >= the build host's
-#   $DIST/versa-pdf-<version>-linux-<arch>.AppImage.zsync  delta updates (needs zsyncmake)
-#   $DIST/versa-pdf-<version>-linux-<arch>.deb       Debian, Ubuntu, Mint, Pop!_OS, ...
-#   $DIST/versa-pdf-<version>-linux-<arch>.rpm       Fedora, openSUSE, RHEL, ...
-#   $DIST/versa-pdf-<version>-linux-<arch>.tar.gz    plain FHS-style tree (bin/, share/)
-#   $DIST/versa-pdf-cli-<version>-linux-<arch>.tar.gz  the headless CLI alone (servers, CI, agents)
+#   $DIST/mota-engil-pdf-editor-<version>-linux-<arch>.AppImage  any distro with glibc >= the build host's
+#   $DIST/mota-engil-pdf-editor-<version>-linux-<arch>.AppImage.zsync  delta updates (needs zsyncmake)
+#   $DIST/mota-engil-pdf-editor-<version>-linux-<arch>.deb       Debian, Ubuntu, Mint, Pop!_OS, ...
+#   $DIST/mota-engil-pdf-editor-<version>-linux-<arch>.rpm       Fedora, openSUSE, RHEL, ...
+#   $DIST/mota-engil-pdf-editor-<version>-linux-<arch>.tar.gz    plain FHS-style tree (bin/, share/)
+#   $DIST/mota-engil-pdf-editor-cli-<version>-linux-<arch>.tar.gz  the headless CLI alone (servers, CI, agents)
 #
 # Cross-compiling (CI: riscv64, tar only): set CROSS_ARCH (riscv64), CROSS_TARGET (the Rust target),
 # CROSS_COMPILE (binutils prefix, for strip) and optionally EMULATOR (e.g. qemu-riscv64) to
@@ -42,10 +42,10 @@ case "$ARCH" in
   aarch64 | arm64) ARCH=aarch64; DEB_ARCH=arm64 ;;
   *) echo "unsupported architecture $ARCH" >&2; exit 2 ;;
 esac
-export PDFCRAFT_MAINTAINER="${PDFCRAFT_MAINTAINER:-Versa PDF contributors}"
-BASENAME="versa-pdf-$VERSION-linux-$ARCH"
+export PDFCRAFT_MAINTAINER="${PDFCRAFT_MAINTAINER:-David Sanculane}"
+BASENAME="mota-engil-pdf-editor-$VERSION-linux-$ARCH"
 
-echo "==> Versa PDF $VERSION for Linux $ARCH ($FORMATS)"
+echo "==> Mota-Engil PDF Editor $VERSION for Linux $ARCH ($FORMATS)"
 
 if [ "$SKIP_BUILD" = 0 ]; then
   if [ -n "${CROSS_TARGET:-}" ]; then
@@ -96,7 +96,7 @@ fi
 # The stripped pdfcraft-cli (and its opt-in MCP server) with the licences, for machines that never
 # open a window. Like the other formats it needs glibc >= the build host's.
 if has cli; then
-  CLI_NAME="versa-pdf-cli-$VERSION-linux-$ARCH"
+  CLI_NAME="mota-engil-pdf-editor-cli-$VERSION-linux-$ARCH"
   CLI_DIR="$WORK/cli/$CLI_NAME"
   mkdir -p "$CLI_DIR"
   cp "$STAGE/usr/bin/pdfcraft-cli" "$CLI_DIR/"
@@ -147,7 +147,7 @@ if has appimage; then
   # each AppImage on GitHub Releases. `latest` is the newest published release that is not a
   # pre-release. A fork's builds point at its own releases through GITHUB_REPOSITORY.
   REPO="${GITHUB_REPOSITORY:-DavidSanculane-dev/pdfcraft}"
-  UPDATE_INFO="gh-releases-zsync|${REPO%%/*}|${REPO#*/}|latest|versa-pdf-*-linux-$ARCH.AppImage.zsync"
+  UPDATE_INFO="gh-releases-zsync|${REPO%%/*}|${REPO#*/}|latest|mota-engil-pdf-editor-*-linux-$ARCH.AppImage.zsync"
   # Extract-and-run: works without FUSE (containers, CI). The output embeds the static runtime,
   # so users don't need libfuse2 either. With zsyncmake on the host (CI installs the zsync
   # package) appimagetool also writes the .zsync, into its working directory, hence the cd.

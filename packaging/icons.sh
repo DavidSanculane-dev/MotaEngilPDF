@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Regenerate the Versa PDF app icons from assets/app-icon/pdfcraft.svg and the Windows PDF file icon
+# Regenerate the Mota-Engil PDF Editor app icons from assets/app-icon/pdfcraft.svg and the Windows PDF file icon
 # from assets/app-icon/pdfcraft-document.svg. Both are master vectors.
 #
 # Needs: resvg (brew install resvg / cargo install resvg) and python3 (stdlib only, for the icon containers).

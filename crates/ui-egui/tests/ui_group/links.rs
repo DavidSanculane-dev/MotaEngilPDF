@@ -1,4 +1,4 @@
-//! Help and About links open the Versa PDF project, while the fork attribution remains explicit.
+//! Help and About links open the Mota-Engil PDF Editor project, while the fork attribution remains explicit.
 
 use egui_kittest::Harness;
 use egui_kittest::kittest::Queryable;
@@ -21,6 +21,8 @@ fn home_screen_has_no_upstream_community_promotion() {
     let h = harness(|_| {});
     assert_eq!(h.query_all_by_label("Discord").count(), 0);
     assert_eq!(h.query_all_by_label_contains("ArtCraft").count(), 0);
+    h.get_by_label("Welcome to Mota-Engil PDF Editor");
+    h.get_by_label("Created by David Sanculane");
 }
 
 #[test]
@@ -33,8 +35,9 @@ fn about_dialog_shows_fork_attribution_and_product_links() {
     });
     h.get_by_label_contains("ArtCraft");
     h.get_by_label("Original PdfCraft source");
-    h.get_by_label("Versa PDF source");
-    h.get_by_label("Developed by David Sanculane");
+    h.get_by_label("Mota-Engil PDF Editor source");
+    h.get_by_label("Created by David Sanculane");
+    h.get_by_label("Internal-use build by David Sanculane; not an official Mota-Engil product or endorsed by the company.");
 }
 
 #[test]

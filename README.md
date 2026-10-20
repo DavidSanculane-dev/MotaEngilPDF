@@ -1,6 +1,7 @@
-<h1 align="center">Versa PDF</h1>
+<h1 align="center">Mota-Engil PDF Editor</h1>
 
 <p align="center">
+  <b>Created by <a href="https://www.linkedin.com/in/david-sanculane-143b4141/?isSelfProfile=true">David Sanculane</a></b><br>
   <b>The PDF workbench; an open-source, clean-room reimplementation of Adobe Acrobat, rebuilt in pure Rust.</b><br>
   Read, organize, combine, split and secure PDFs in a fast, native app, written in Rust from the ground up.<br>
   macOS · Windows · Linux · FreeBSD · the web
@@ -21,9 +22,9 @@
 <br>
 
 <p align="center">
-  <img src="docs/images/pdfcraft-viewer.png" alt="Versa PDF with the Versa PDF Showcase cover page open, the All tools panel on the left and 19 threaded comments on the right" width="100%">
+  <img src="docs/images/pdfcraft-viewer.png" alt="Mota-Engil PDF Editor with the Mota-Engil PDF Editor Showcase cover page open, the All tools panel on the left and 19 threaded comments on the right" width="100%">
   <br>
-  <sub>The Versa PDF Showcase, a 13-page specimen PDF, open with the All tools panel and threaded comments.</sub>
+  <sub>The Mota-Engil PDF Editor Showcase, a 13-page specimen PDF, open with the All tools panel and threaded comments.</sub>
 </p>
 
 <p align="center">
@@ -46,9 +47,12 @@
 
 ## About this fork
 
-Versa PDF is an independent continuation of PdfCraft, an open-source PDF application created by the
-ArtCraft team. It is not an official ArtCraft product and is not affiliated with or endorsed by the
-original maintainers. The upstream MIT OR Apache-2.0 terms and required notices remain in force.
+Mota-Engil PDF Editor is an independent build created by David Sanculane for internal PDF workflows.
+It is based on PdfCraft, an open-source PDF application created by the ArtCraft team. This is not an
+official Mota-Engil product, and the use of the company name does not imply its approval or endorsement.
+It is also not affiliated with or endorsed by the original PdfCraft maintainers. The upstream MIT OR
+Apache-2.0 terms and required notices remain in force. Any cost savings compared with third-party
+services depend on deployment, support and company licensing decisions.
 
 - **Source and releases:** [DavidSanculane-dev/pdfcraft](https://github.com/DavidSanculane-dev/pdfcraft)
 - **Issues:** [Report a bug or request a feature](https://github.com/DavidSanculane-dev/pdfcraft/issues)
@@ -82,7 +86,7 @@ No account, no telemetry, no cloud. It works offline and opens instantly. The en
 
 ## Read anything, beautifully
 
-Versa PDF renders PDFs with care for the details that make a page feel right: kerning and ligatures, right-to-left and complex scripts, vertical CJK, colour emoji, shadings, blend modes, soft masks and optional content.
+Mota-Engil PDF Editor renders PDFs with care for the details that make a page feel right: kerning and ligatures, right-to-left and complex scripts, vertical CJK, colour emoji, shadings, blend modes, soft masks and optional content.
 
 <p align="center">
   <img src="docs/images/pdfcraft-scripts.png" alt="The Scripts of the World page: Arabic, Hebrew, Devanagari, Thai, Greek, Cyrillic, Chinese, Korean, IPA, Armenian, Georgian and Tamil samples, with vertical Japanese in the right margin" width="100%">
@@ -155,7 +159,7 @@ Open **Organize pages** to see every page at once:
 
 When open documents exceed the window width, scroll over the tab strip with the mouse wheel or trackpad, or use its horizontal scrollbar. Opening or switching to a document brings its tab into view.
 
-Unsaved documents carry a dot on their tab, and closing or quitting asks before anything is lost. Changes are autosaved every minute. If Versa PDF ever quits unexpectedly, it offers to recover your work the next time it opens. Encrypted documents stay encrypted on disk.
+Unsaved documents carry a dot on their tab, and closing or quitting asks before anything is lost. Changes are autosaved every minute. If Mota-Engil PDF Editor ever quits unexpectedly, it offers to recover your work the next time it opens. Encrypted documents stay encrypted on disk.
 
 </td>
 <td width="50%" valign="top"><img src="docs/images/pdfcraft-split.png" alt="The Split document dialog over the organize view, set to one page per file and reporting that it creates 13 files from 13 pages"><br><sub>Split document: one page per file makes 13 files.</sub></td>
@@ -186,12 +190,12 @@ pdfcraft-cli split   report.pdf --every 10 --out-dir parts/
 
 ## Open protected documents and respect their rules
 
-Versa PDF implements the PDF standard security handler completely:
+Mota-Engil PDF Editor implements the PDF standard security handler completely:
 - every revision, from 40-bit RC4 to AES-256;
 - user and owner passwords, including Unicode passwords normalised with SASLprep;
 - crypt filters and attachment-only encryption.
 
-Documents restricted by their author show a clear notice, and Versa PDF honours their permissions. Enter the owner password and the restrictions lift. Edits to encrypted documents are saved encrypted, under the same keys.
+Documents restricted by their author show a clear notice, and Mota-Engil PDF Editor honours their permissions. Enter the owner password and the restrictions lift. Edits to encrypted documents are saved encrypted, under the same keys.
 
 <table>
 <tr>
@@ -228,7 +232,7 @@ Press <kbd>⌘K</kbd> to search every tool and command, or browse the **All tool
 <table>
 <tr>
 <td width="50%"><img src="docs/images/pdfcraft-palette.png" alt="The command palette searching for 'page', listing Page grid, Page labels, Rotate pages, Insert pages, Delete pages, Extract pages and more, each with the tool it belongs to"></td>
-<td width="50%"><img src="docs/images/pdfcraft-tools.png" alt="The Welcome to Versa PDF home screen with recommended tools, a recent file, a privacy note, and the full tool catalogue in the side panel"></td>
+<td width="50%"><img src="docs/images/pdfcraft-tools.png" alt="The Welcome to Mota-Engil PDF Editor home screen with recommended tools, a recent file, a privacy note, and the full tool catalogue in the side panel"></td>
 </tr>
 <tr>
 <td align="center"><sub>The <kbd>⌘K</kbd> command palette</sub></td>
@@ -268,10 +272,10 @@ Every engine feature is reachable without the GUI, through one table of JSON-Sch
 
   With `--root`, every file the script's steps read or write stays in that directory, including the PNG a step saves with `"out"` (the script itself is read from wherever you name it).
 
-- **An MCP server**, for AI agents such as Claude. **It is opt-in:** Versa PDF never starts it on its own, and it opens no network port. It runs only while an agent launches `pdfcraft-cli mcp`, talks over stdin/stdout, and stops when the agent disconnects. To enable it, add it to your agent's MCP configuration:
+- **An MCP server**, for AI agents such as Claude. **It is opt-in:** Mota-Engil PDF Editor never starts it on its own, and it opens no network port. It runs only while an agent launches `pdfcraft-cli mcp`, talks over stdin/stdout, and stops when the agent disconnects. To enable it, add it to your agent's MCP configuration:
 
   ```json
-  { "mcpServers": { "versa-pdf": { "command": "pdfcraft-cli", "args": ["mcp", "--root", "/path/to/your/pdfs"] } } }
+  { "mcpServers": { "mota-engil-pdf-editor": { "command": "pdfcraft-cli", "args": ["mcp", "--root", "/path/to/your/pdfs"] } } }
   ```
 
   `--compact` shrinks the tool list the agent has to read: `tools/list` returns about ten core tools plus `tool_search` and `tool_call`, which find and run every other tool, so the list costs far fewer tokens. Every tool still works.
@@ -318,7 +322,7 @@ and floating geometry. Invalid requests return an error without changing the doc
 
 ## How it's built
 
-Versa PDF is a Cargo workspace of focused crates, layered so the core never depends on the UI:
+Mota-Engil PDF Editor is a Cargo workspace of focused crates, layered so the core never depends on the UI:
 
 | Crate | What it does |
 |---|---|
@@ -346,7 +350,7 @@ On top of those, two corpus sweeps run over real-world files:
 
 The output is verified with independent tools: hayro, qpdf and poppler.
 
-Versa PDF is a clean-room implementation. Its behaviour comes from the ISO 32000 specification and black-box observation, never from anyone else's code. Every icon, font and image is openly licensed and listed in [ATTRIBUTION.md](ATTRIBUTION.md).
+Mota-Engil PDF Editor is a clean-room implementation. Its behaviour comes from the ISO 32000 specification and black-box observation, never from anyone else's code. Every icon, font and image is openly licensed and listed in [ATTRIBUTION.md](ATTRIBUTION.md).
 
 ## Get started
 
@@ -380,15 +384,15 @@ CRAFT_FONTS_DIR=../craft-fonts cargo run --release -p pdfcraft -- some.pdf
 Each [GitHub release](https://github.com/DavidSanculane-dev/pdfcraft/releases) has ready-made builds for macOS,
 Windows, Linux (AppImage, Flatpak, `.deb`, `.rpm` and a tarball), FreeBSD and the web; see
 [Downloads](#downloads). The third-party Gentoo package `app-text/pdfcraft-bin` is for the original PdfCraft project, not
-Versa PDF.
+Mota-Engil PDF Editor.
 
 Logs, environment variables and other development notes are in [docs/development.md](docs/development.md).
 
 ## What's next
 
-Versa PDF is young and moving fast. The aim is a workbench where you can view, organize, annotate, fill, sign and edit PDFs, at parity with Acrobat Pro.
+Mota-Engil PDF Editor is young and moving fast. The aim is a workbench where you can view, organize, annotate, fill, sign and edit PDFs, at parity with Acrobat Pro.
 
-**Where it stands (October 2026), honestly:** Versa PDF is **alpha**. Most of Acrobat Pro's offline features exist in some form (57% of all tracked features, 94% of the must-haves). For everyday work (viewing, commenting, filling and signing forms, organizing pages) it is about 55% of the way to replacing Acrobat; against all of Acrobat Pro, about 49%; for someone who only needs the essentials, about 66%. Every everyday workflow can be completed, but converting and sharing is weak: no Office-to-PDF, and Word export that loses layout.
+**Where it stands (October 2026), honestly:** Mota-Engil PDF Editor is **alpha**. Most of Acrobat Pro's offline features exist in some form (57% of all tracked features, 94% of the must-haves). For everyday work (viewing, commenting, filling and signing forms, organizing pages) it is about 55% of the way to replacing Acrobat; against all of Acrobat Pro, about 49%; for someone who only needs the essentials, about 66%. Every everyday workflow can be completed, but converting and sharing is weak: no Office-to-PDF, and Word export that loses layout.
 
 - **Good today:** viewing and search; organizing, combining and splitting; most kinds of comment; filling and authoring forms (with sandboxed JavaScript); passwords, redaction and sanitizing; basic digital signatures; printing; the Accessibility Checker; agent control through the CLI and MCP.
 - **Still borrowed:** pages are drawn by the `hayro` crate while our own renderer is built.
@@ -403,16 +407,16 @@ The summary is in **[ROADMAP.md](ROADMAP.md)**; the full assessment by dimension
 
 ## Downloads
 
-**New to Versa PDF?** Download it from the [latest Versa PDF release](https://github.com/DavidSanculane-dev/pdfcraft/releases/latest).
+**New to Mota-Engil PDF Editor?** Download it from the [latest Mota-Engil PDF Editor release](https://github.com/DavidSanculane-dev/pdfcraft/releases/latest).
 **Want a specific build or format?** The [latest release](https://github.com/DavidSanculane-dev/pdfcraft/releases/latest) has every build listed below, and [all releases](https://github.com/DavidSanculane-dev/pdfcraft/releases) has earlier versions and their notes. `<ver>` in the file names is the version number, and `SHA256SUMS.txt` lists a checksum for every file.
 
 ### Windows
 
 | Build | Installer | Portable |
 |---|---|---|
-| x64 (64-bit Intel/AMD) | `versa-pdf-<ver>-windows-x64.msi` | `versa-pdf-<ver>-windows-x64-portable.zip` |
-| arm64 (Snapdragon and other ARM PCs) | `versa-pdf-<ver>-windows-arm64.msi` | `versa-pdf-<ver>-windows-arm64-portable.zip` |
-| x86 (32-bit) | `versa-pdf-<ver>-windows-x86.msi` | `versa-pdf-<ver>-windows-x86-portable.zip` |
+| x64 (64-bit Intel/AMD) | `mota-engil-pdf-editor-<ver>-windows-x64.msi` | `mota-engil-pdf-editor-<ver>-windows-x64-portable.zip` |
+| arm64 (Snapdragon and other ARM PCs) | `mota-engil-pdf-editor-<ver>-windows-arm64.msi` | `mota-engil-pdf-editor-<ver>-windows-arm64-portable.zip` |
+| x86 (32-bit) | `mota-engil-pdf-editor-<ver>-windows-x86.msi` | `mota-engil-pdf-editor-<ver>-windows-x86-portable.zip` |
 
 Installers and executables are code-signed.
 
@@ -421,13 +425,13 @@ logs and crash recovery in the compatibility-preserving `PdfCraftData` folder ne
 `pdfcraft.exe`, so nothing is written to `%APPDATA%`; delete that file to use the normal per-user
 folders.
 
-The MSI installs for all users and requires administrator privileges. It adds "Edit with Versa PDF"
+The MSI installs for all users and requires administrator privileges. It adds "Edit with Mota-Engil PDF Editor"
 to the right-click menu of PDF files in File Explorer (on Windows 11, under "Show more options"),
 without changing which app opens PDFs by default. For unattended deployment without a desktop
 shortcut, run from an elevated terminal:
 
 ```powershell
-msiexec /i "versa-pdf-<ver>-windows-x64.msi" /qn /norestart INSTALLDESKTOPSHORTCUT=0
+msiexec /i "mota-engil-pdf-editor-<ver>-windows-x64.msi" /qn /norestart INSTALLDESKTOPSHORTCUT=0
 ```
 
 Add `INSTALLPDFCONTEXTMENU=0` to leave out the right-click menu entry. Pass both on upgrades too,
@@ -438,21 +442,21 @@ installation overrides are not supported.
 
 | Build | File | Notes |
 |---|---|---|
-| App, universal (Apple silicon + Intel) | `versa-pdf-<ver>-macos-universal.dmg` | Signed and notarized |
-| Command-line tool, universal | `versa-pdf-cli-<ver>-macos-universal.zip` | Signed and notarized |
+| App, universal (Apple silicon + Intel) | `mota-engil-pdf-editor-<ver>-macos-universal.dmg` | Signed and notarized |
+| Command-line tool, universal | `mota-engil-pdf-editor-cli-<ver>-macos-universal.zip` | Signed and notarized |
 
 ### Linux
 
 | Format | x86_64 | aarch64 (ARM64) | Notes |
 |---|---|---|---|
-| AppImage | `versa-pdf-<ver>-linux-x86_64.AppImage` | `versa-pdf-<ver>-linux-aarch64.AppImage` | Runs anywhere; updates itself with [AppImageUpdate](https://github.com/AppImageCommunity/AppImageUpdate) (`.zsync` files) |
-| Flatpak | `versa-pdf-<ver>-linux-x86_64.flatpak` | `versa-pdf-<ver>-linux-aarch64.flatpak` | Sandboxed; `flatpak install --user <file>` |
-| Debian/Ubuntu | `versa-pdf-<ver>-linux-x86_64.deb` | `versa-pdf-<ver>-linux-aarch64.deb` | |
-| Fedora/RHEL/openSUSE | `versa-pdf-<ver>-linux-x86_64.rpm` | `versa-pdf-<ver>-linux-aarch64.rpm` | |
-| Tarball | `versa-pdf-<ver>-linux-x86_64.tar.gz` | `versa-pdf-<ver>-linux-aarch64.tar.gz` | Unpack anywhere |
-| Command-line tool | `versa-pdf-cli-<ver>-linux-x86_64.tar.gz` | `versa-pdf-cli-<ver>-linux-aarch64.tar.gz` | `pdfcraft-cli` alone (and its opt-in MCP server), for servers, CI and agents |
+| AppImage | `mota-engil-pdf-editor-<ver>-linux-x86_64.AppImage` | `mota-engil-pdf-editor-<ver>-linux-aarch64.AppImage` | Runs anywhere; updates itself with [AppImageUpdate](https://github.com/AppImageCommunity/AppImageUpdate) (`.zsync` files) |
+| Flatpak | `mota-engil-pdf-editor-<ver>-linux-x86_64.flatpak` | `mota-engil-pdf-editor-<ver>-linux-aarch64.flatpak` | Sandboxed; `flatpak install --user <file>` |
+| Debian/Ubuntu | `mota-engil-pdf-editor-<ver>-linux-x86_64.deb` | `mota-engil-pdf-editor-<ver>-linux-aarch64.deb` | |
+| Fedora/RHEL/openSUSE | `mota-engil-pdf-editor-<ver>-linux-x86_64.rpm` | `mota-engil-pdf-editor-<ver>-linux-aarch64.rpm` | |
+| Tarball | `mota-engil-pdf-editor-<ver>-linux-x86_64.tar.gz` | `mota-engil-pdf-editor-<ver>-linux-aarch64.tar.gz` | Unpack anywhere |
+| Command-line tool | `mota-engil-pdf-editor-cli-<ver>-linux-x86_64.tar.gz` | `mota-engil-pdf-editor-cli-<ver>-linux-aarch64.tar.gz` | `pdfcraft-cli` alone (and its opt-in MCP server), for servers, CI and agents |
 
-RISC-V (riscv64) builds come as tarballs only: `versa-pdf-<ver>-linux-riscv64.tar.gz` and `versa-pdf-cli-<ver>-linux-riscv64.tar.gz`. They are cross-compiled and need glibc 2.39 or newer (Ubuntu 24.04+, Debian 13+).
+RISC-V (riscv64) builds come as tarballs only: `mota-engil-pdf-editor-<ver>-linux-riscv64.tar.gz` and `mota-engil-pdf-editor-cli-<ver>-linux-riscv64.tar.gz`. They are cross-compiled and need glibc 2.39 or newer (Ubuntu 24.04+, Debian 13+).
 
 Every other Linux build needs glibc 2.35 or newer (Ubuntu 22.04+, Debian 12+, Fedora 36+, RHEL 10).
 
@@ -460,27 +464,27 @@ Every other Linux build needs glibc 2.35 or newer (Ubuntu 22.04+, Debian 12+, Fe
 
 | Build | File |
 |---|---|
-| x86_64 | `versa-pdf-<ver>-freebsd-x86_64.tar.gz` |
+| x86_64 | `mota-engil-pdf-editor-<ver>-freebsd-x86_64.tar.gz` |
 
 ### Web (WebAssembly)
 
 | Build | File | Notes |
 |---|---|---|
-| Static site | `versa-pdf-web-<ver>.zip` | Runs in a modern browser; host it on any static server |
+| Static site | `mota-engil-pdf-editor-web-<ver>.zip` | Runs in a modern browser; host it on any static server |
 
 ---
 
 ## License and credits
 
-Versa PDF is dual-licensed under [MIT](LICENSE-MIT) or [Apache-2.0](LICENSE-APACHE), at your option.
-Copyright (c) 2026 ArtCraft Team and PdfCraft contributors; Versa PDF contributors. Required notices are in [NOTICE](NOTICE).
+Mota-Engil PDF Editor is dual-licensed under [MIT](LICENSE-MIT) or [Apache-2.0](LICENSE-APACHE), at your option.
+Copyright (c) 2026 ArtCraft Team, PdfCraft contributors and Versa PDF contributors. Required notices are in [NOTICE](NOTICE).
 
 Bundled fonts, icons, images and other assets keep their own open licenses; each one is listed
 with its author, source and license in [ATTRIBUTION.md](ATTRIBUTION.md). Release builds also embed
 the Japanese fonts of [craft-fonts](https://github.com/storytold/craft-fonts/blob/main/ATTRIBUTION.md)
 (SIL Open Font License 1.1).
 
-Versa PDF is an independent fork based on PdfCraft by the ArtCraft team. It is not affiliated with
+Mota-Engil PDF Editor is an independent fork based on PdfCraft by the ArtCraft team. It is not affiliated with
 or endorsed by ArtCraft or the original PdfCraft maintainers. Adobe and the other product names
 mentioned in this README are trademarks of their respective owners; they describe compatibility
 targets only and do not imply endorsement.

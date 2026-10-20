@@ -7,9 +7,9 @@
   <key>CFBundleDevelopmentRegion</key>
   <string>en</string>
   <key>CFBundleDisplayName</key>
-  <string>Versa PDF</string>
+  <string>Mota-Engil PDF Editor</string>
   <key>CFBundleName</key>
-  <string>Versa PDF</string>
+  <string>Mota-Engil PDF Editor</string>
   <key>CFBundleExecutable</key>
   <string>PdfCraft</string>
   <key>CFBundleIdentifier</key>
@@ -43,9 +43,9 @@
   <key>NSRequiresAquaSystemAppearance</key>
   <false/>
   <key>NSHumanReadableCopyright</key>
-  <string>Copyright (c) 2026 ArtCraft Team and PdfCraft contributors; Versa PDF contributors. MIT OR Apache-2.0.</string>
+  <string>Copyright (c) 2026 ArtCraft Team and PdfCraft contributors; Mota-Engil PDF Editor rebrand by David Sanculane. MIT OR Apache-2.0.</string>
 
-  <!-- Documents Versa PDF opens (#73): it is offered under Open With and can be made the default
+  <!-- Documents Mota-Engil PDF Editor opens (#73): it is offered under Open With and can be made the default
        for PDFs, without taking over from the system's viewer on install ("Alternate"). Declared by
        UTI (LSItemContentTypes, what modern macOS filters Open With > Recommended Applications on),
        plus extension and MIME type for backward compatibility. Finder hands the

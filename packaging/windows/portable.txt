@@ -1,9 +1,9 @@
-Versa PDF portable mode
+Mota-Engil PDF Editor portable mode
 
-While this file sits next to pdfcraft.exe, Versa PDF keeps its settings, log files, crash-recovery
+While this file sits next to pdfcraft.exe, Mota-Engil PDF Editor keeps its settings, log files, crash-recovery
 autosaves and new digital IDs in the compatibility-preserving PdfCraftData folder beside it, and writes nothing to
-%APPDATA% or %LOCALAPPDATA%. Copy the whole folder to move Versa PDF with its settings.
+%APPDATA% or %LOCALAPPDATA%. Copy the whole folder to move Mota-Engil PDF Editor with its settings.
 
-Delete this file to use the normal per-user folders (%APPDATA%\Versa PDF and
-%LOCALAPPDATA%\Versa PDF) instead. If PdfCraftData can't be written (for example on a read-only
-drive), Versa PDF says so and uses the per-user folders instead.
+Delete this file to use the normal per-user folders (%APPDATA%\Mota-Engil PDF Editor and
+%LOCALAPPDATA%\Mota-Engil PDF Editor) instead. If PdfCraftData can't be written (for example on a read-only
+drive), Mota-Engil PDF Editor says so and uses the per-user folders instead.

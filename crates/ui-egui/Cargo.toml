@@ -1,6 +1,6 @@
 [package]
 name = "pdfcraft-ui-egui"
-description = "The egui shell of Versa PDF"
+description = "The egui shell of Mota-Engil PDF Editor"
 version.workspace = true
 edition.workspace = true
 license.workspace = true

@@ -1,6 +1,6 @@
-# Versa PDF app icon
+# Mota-Engil PDF Editor app icon
 
-<img src="pdfcraft-small.svg" alt="Versa PDF app icon: a folded page with a geometric V" width="128">
+<img src="pdfcraft-small.svg" alt="Mota-Engil PDF Editor app icon: a folded page with a geometric V" width="128">
 
 The original geometric mark combines a folded page and a V on a rounded blue tile. Its SVG is
 contributor-original and licensed under either MIT or Apache-2.0; see [LICENSE.txt](LICENSE.txt).
@@ -22,7 +22,7 @@ contributor-original and licensed under either MIT or Apache-2.0; see [LICENSE.t
 Where it shows: `apps/pdfcraft/src/main.rs` sets the window icon (Dock, taskbar, Alt-Tab, launcher) and the
 Wayland app id `io.github.davidsanculane-dev.versa-pdf`; the matching desktop entry names the hicolor icon.
 
-Windows PDF files use resource 2 (`"pdfcraft.exe",-2`) when Versa PDF is chosen as the default
+Windows PDF files use resource 2 (`"pdfcraft.exe",-2`) when Mota-Engil PDF Editor is chosen as the default
 reader; the app keeps resource 1. The document outline is adapted from Lucide `file-text`
 1.49.0 (ISC); its badge and outlined lettering are original (`MIT OR Apache-2.0`), covered by
 [LICENSE-document.txt](LICENSE-document.txt). Both icons are embedded, requiring no runtime

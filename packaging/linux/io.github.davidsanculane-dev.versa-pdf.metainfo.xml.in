@@ -5,14 +5,14 @@
   <id>io.github.davidsanculane-dev.versa-pdf</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>MIT OR Apache-2.0</project_license>
-  <name>Versa PDF</name>
+  <name>Mota-Engil PDF Editor</name>
   <summary>Read, organize, combine, split and secure PDFs</summary>
   <developer id="io.github.davidsanculane-dev">
-    <name>Versa PDF contributors</name>
+    <name>Mota-Engil PDF Editor contributors</name>
   </developer>
   <description>
     <p>
-      Versa PDF is an open-source PDF workbench. Read, comment on, fill in and sign PDFs;
+      Mota-Engil PDF Editor is an open-source PDF workbench. Read, comment on, fill in and sign PDFs;
       organize, combine and split pages; edit, redact, protect and export documents.
     </p>
   </description>

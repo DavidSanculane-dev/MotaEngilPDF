@@ -1,4 +1,4 @@
-//! Project automation for Versa PDF, run via `cargo xtask <command>`.
+//! Project automation for Mota-Engil PDF Editor, run via `cargo xtask <command>`.
 
 use std::process::ExitCode;
 

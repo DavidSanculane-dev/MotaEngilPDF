@@ -30,7 +30,7 @@ pub const LANGUAGES: &[(&str, &str)] = &[("en", "English")];
 pub enum OcrError {
     /// Shown to end users (release packages ship the models; a source build fetches them with
     /// `cargo xtask models`). The UI catalogs key this exact text.
-    #[error("the text recognition models are not installed (reinstall Versa PDF, or set PDFCRAFT_MODELS to the folder that holds them)")]
+    #[error("the text recognition models are not installed (reinstall Mota-Engil PDF Editor, or set PDFCRAFT_MODELS to the folder that holds them)")]
     NoModels,
     #[error("loading {0}: {1}")]
     Load(String, String),
@@ -304,8 +304,8 @@ mod tests {
     fn finds_the_models_in_every_release_package_layout() {
         let base = std::env::temp_dir().join(format!("pdfcraft-ocr-layouts-{}", std::process::id()));
         let layouts = [
-            ("windows", "Versa PDF", "Versa PDF/models"),
-            ("macos", "Versa PDF.app/Contents/MacOS", "Versa PDF.app/Contents/Resources/models"),
+            ("windows", "Mota-Engil PDF Editor", "Mota-Engil PDF Editor/models"),
+            ("macos", "Mota-Engil PDF Editor.app/Contents/MacOS", "Mota-Engil PDF Editor.app/Contents/Resources/models"),
             ("linux-deb-rpm", "usr/bin", "usr/share/versa-pdf/models"),
             ("linux-tar", "versa-pdf-1.0.0-linux-x86_64/bin", "versa-pdf-1.0.0-linux-x86_64/share/versa-pdf/models"),
             ("appimage", "VersaPDF.AppDir/usr/bin", "VersaPDF.AppDir/usr/share/versa-pdf/models"),

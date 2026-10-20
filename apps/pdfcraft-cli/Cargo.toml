@@ -1,6 +1,6 @@
 [package]
 name = "pdfcraft-cli"
-description = "Versa PDF command-line tool: inspect, render and robustness-check PDFs"
+description = "Mota-Engil PDF Editor command-line tool: inspect, render and robustness-check PDFs"
 version.workspace = true
 edition.workspace = true
 license.workspace = true

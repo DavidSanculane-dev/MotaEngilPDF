@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Name=Versa PDF
+Name=Mota-Engil PDF Editor
 GenericName=PDF Editor
 Comment=Read, organize, combine, split and secure PDFs
 Exec=pdfcraft %U

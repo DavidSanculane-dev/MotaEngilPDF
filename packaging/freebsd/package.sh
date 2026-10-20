@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# Build Versa PDF for FreeBSD and package it:
-#   $DIST/versa-pdf-<version>-freebsd-<arch>.tar.gz   a /usr/local-style tree (bin/, share/)
+# Build Mota-Engil PDF Editor for FreeBSD and package it:
+#   $DIST/mota-engil-pdf-editor-<version>-freebsd-<arch>.tar.gz   a /usr/local-style tree (bin/, share/)
 #
 # Extract it into /usr/local (or anywhere, and run bin/pdfcraft from there). The desktop entry,
 # MIME type, AppStream metadata and icons are the freedesktop ones Linux uses.
@@ -28,9 +28,9 @@ case "$ARCH" in
   arm64 | aarch64) ARCH=aarch64 ;;
   *) echo "unsupported architecture $ARCH" >&2; exit 2 ;;
 esac
-BASENAME="versa-pdf-$VERSION-freebsd-$ARCH"
+BASENAME="mota-engil-pdf-editor-$VERSION-freebsd-$ARCH"
 
-echo "==> Versa PDF $VERSION for FreeBSD $ARCH"
+echo "==> Mota-Engil PDF Editor $VERSION for FreeBSD $ARCH"
 
 if [ "$SKIP_BUILD" = 0 ]; then
   (cd "$ROOT" && cargo build --release --locked -p pdfcraft -p pdfcraft-cli)

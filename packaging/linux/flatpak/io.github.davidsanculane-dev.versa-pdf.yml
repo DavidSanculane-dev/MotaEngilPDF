@@ -1,4 +1,4 @@
-# Flatpak manifest for Versa PDF.
+# Flatpak manifest for Mota-Engil PDF Editor.
 #
 # Flatpak builds run offline, so the crate sources must be vendored first. From the repo root:
 #

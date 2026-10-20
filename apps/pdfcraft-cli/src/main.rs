@@ -1,4 +1,4 @@
-//! pdfcraft-cli — headless Versa PDF.
+//! pdfcraft-cli — headless Mota-Engil PDF Editor.
 //!
 //! Usage: `pdfcraft-cli --help`, which prints `USAGE` below.
 //!

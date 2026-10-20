@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Build, sign and (optionally) notarize the macOS release artifacts:
 #
-#   $DIST/versa-pdf-<version>-macos-<arch>.dmg          Versa PDF.app on a drag-to-Applications DMG
-#   $DIST/versa-pdf-cli-<version>-macos-<arch>.zip      the headless CLI
+#   $DIST/mota-engil-pdf-editor-<version>-macos-<arch>.dmg          Mota-Engil PDF Editor.app on a drag-to-Applications DMG
+#   $DIST/mota-engil-pdf-editor-cli-<version>-macos-<arch>.zip      the headless CLI
 #
 # Usage: packaging/macos/package.sh [--arch universal|aarch64|x86_64] [--skip-build]
 #
@@ -39,9 +39,9 @@ export MACOSX_DEPLOYMENT_TARGET=11.0
 IDENTITY="${MACOS_SIGN_IDENTITY:--}"
 SHORT_VERSION="${VERSION%%-*}"
 WORK="$CARGO_TARGET_DIR/macos-package"
-APP="$WORK/Versa PDF.app"
-DMG="$DIST/versa-pdf-$VERSION-macos-$ARCH.dmg"
-CLI_ZIP="$DIST/versa-pdf-cli-$VERSION-macos-$ARCH.zip"
+APP="$WORK/Mota-Engil PDF Editor.app"
+DMG="$DIST/mota-engil-pdf-editor-$VERSION-macos-$ARCH.dmg"
+CLI_ZIP="$DIST/mota-engil-pdf-editor-cli-$VERSION-macos-$ARCH.zip"
 
 NOTARIZE=0
 if [ "$IDENTITY" = "-" ]; then
@@ -52,7 +52,7 @@ else
   warn "macOS: APPLE_ID / APPLE_PASSWORD / APPLE_TEAM_ID incomplete; signed but not notarized"
 fi
 
-echo "==> Versa PDF $VERSION for macOS ($ARCH), identity: $IDENTITY, notarize: $NOTARIZE"
+echo "==> Mota-Engil PDF Editor $VERSION for macOS ($ARCH), identity: $IDENTITY, notarize: $NOTARIZE"
 
 # ---- build -------------------------------------------------------------------------------------
 if [ "$SKIP_BUILD" = 0 ]; then
@@ -97,7 +97,7 @@ notarize() {
   fi
 }
 
-# ---- Versa PDF.app ----------------------------------------------------------------------------
+# ---- Mota-Engil PDF Editor.app ----------------------------------------------------------------------------
 echo "==> assembling $APP"
 mkdir -p "$APP/Contents/MacOS" "$APP/Contents/Resources"
 # Executable and icon carry the display name (CFBundleExecutable / CFBundleIconFile).
@@ -131,7 +131,7 @@ fi
 echo "==> building $DMG"
 STAGE="$WORK/dmg"
 mkdir -p "$STAGE"
-ditto "$APP" "$STAGE/Versa PDF.app"
+ditto "$APP" "$STAGE/Mota-Engil PDF Editor.app"
 ln -s /Applications "$STAGE/Applications"
 # Finder window layout: background, icon size and positions (packaging/macos/dmg/README.md).
 mkdir -p "$STAGE/.background"
@@ -158,7 +158,7 @@ hdiutil_retry() {
     sleep $((attempt * 10))
   done
 }
-hdiutil_retry create create -srcfolder "$STAGE" -volname "Versa PDF" -fs HFS+ -format UDZO -imagekey zlib-level=9 -ov "$DMG"
+hdiutil_retry create create -srcfolder "$STAGE" -volname "Mota-Engil PDF Editor" -fs HFS+ -format UDZO -imagekey zlib-level=9 -ov "$DMG"
 sign "$DMG"
 codesign --verify --strict --verbose=2 "$DMG"
 # The app inside the image must still pass --strict, so a makehybrid-style regression can't ship.
@@ -166,7 +166,7 @@ MOUNT="$WORK/dmg-check"
 rm -rf "$MOUNT"
 mkdir -p "$MOUNT"
 hdiutil_retry attach attach -nobrowse -readonly -mountpoint "$MOUNT" "$DMG" >/dev/null
-if ! codesign --verify --strict --deep --verbose=2 "$MOUNT/Versa PDF.app"; then
+if ! codesign --verify --strict --deep --verbose=2 "$MOUNT/Mota-Engil PDF Editor.app"; then
   hdiutil_retry detach detach "$MOUNT" >/dev/null || true
   exit 1
 fi
@@ -180,7 +180,7 @@ fi
 
 # ---- CLI ---------------------------------------------------------------------------------------
 echo "==> building $CLI_ZIP"
-CLI_DIR="$WORK/versa-pdf-cli-$VERSION-macos-$ARCH"
+CLI_DIR="$WORK/mota-engil-pdf-editor-cli-$VERSION-macos-$ARCH"
 mkdir -p "$CLI_DIR"
 cp "$WORK/bin/pdfcraft-cli" "$CLI_DIR/"
 copy_docs "$CLI_DIR"

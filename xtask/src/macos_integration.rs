@@ -37,17 +37,17 @@ struct Probe {
 pub fn run(args: &[String]) -> anyhow::Result<()> {
     let options = parse_args(args)?;
     if options.help {
-        println!("Usage: cargo xtask macos-integration [--bundle \"Versa PDF.app\"] [--pdf file.pdf]");
+        println!("Usage: cargo xtask macos-integration [--bundle \"Mota-Engil PDF Editor.app\"] [--pdf file.pdf]");
         return Ok(());
     }
     let mut report = String::new();
-    writeln!(report, "Versa PDF macOS integration diagnostics")?;
+    writeln!(report, "Mota-Engil PDF Editor macOS integration diagnostics")?;
     writeln!(report, "target: {} / {}", std::env::consts::OS, std::env::consts::ARCH)?;
     writeln!(report, "os version: {}", os_version())?;
 
     match options.bundle.as_deref() {
         Some(bundle) => write_bundle_report(&mut report, bundle)?,
-        None => writeln!(report, "bundle: not supplied (use --bundle \"/path/to/Versa PDF.app\")")?,
+        None => writeln!(report, "bundle: not supplied (use --bundle \"/path/to/Mota-Engil PDF Editor.app\")")?,
     }
 
     write_tool_report(&mut report, "quick look", "qlmanage", &["-m", "plugins"])?;
@@ -316,8 +316,8 @@ mod tests {
     #[test]
     fn parses_optional_paths() {
         assert_eq!(
-            parse_args(&args(&["--bundle", "Versa PDF.app", "--pdf", "fixture.pdf"])).expect("arguments"),
-            Options { help: false, bundle: Some("Versa PDF.app".into()), pdf: Some("fixture.pdf".into()) }
+            parse_args(&args(&["--bundle", "Mota-Engil PDF Editor.app", "--pdf", "fixture.pdf"])).expect("arguments"),
+            Options { help: false, bundle: Some("Mota-Engil PDF Editor.app".into()), pdf: Some("fixture.pdf".into()) }
         );
     }
 
