@@ -6,7 +6,7 @@ use std::path::{Path, PathBuf};
 pub const GITHUB: &str = "https://github.com/DavidSanculane-dev/pdfcraft";
 pub const ISSUES: &str = "https://github.com/DavidSanculane-dev/pdfcraft/issues";
 pub const APP_PAGE: &str = GITHUB;
-pub const CREATOR_LINKEDIN: &str = "https://www.linkedin.com/in/david-sanculane-143b4141/?isSelfProfile=true";
+pub const CREATOR_LINKEDIN: &str = "https://www.linkedin.com/in/david-sanculane-143b4141";
 
 /// A link and the registry command that opens it.
 #[derive(Clone, Copy, Debug)]

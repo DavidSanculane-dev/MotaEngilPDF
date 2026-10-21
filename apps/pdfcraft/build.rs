@@ -22,16 +22,16 @@ fn main() {
     res.set_icon("../../assets/app-icon/pdfcraft.ico")
         .set_icon_with_id("../../assets/app-icon/pdfcraft-document.ico", "2")
         .set_manifest(windows_manifest::WINDOWS_MANIFEST)
-        .set("ProductName", "Mota-Engil PDF Editor")
-        .set("FileDescription", "Mota-Engil PDF Editor")
-        .set("LegalCopyright", "Copyright (c) 2026 ArtCraft Team and PdfCraft contributors; Mota-Engil PDF Editor rebrand by David Sanculane")
-        .set("OriginalFilename", "pdfcraft.exe")
-        .set("InternalName", "pdfcraft.exe");
+        .set("ProductName", "Mota-Engil PDF Editor criado por David Sanculane")
+        .set("FileDescription", "Mota-Engil PDF Editor criado por David Sanculane")
+        .set("LegalCopyright", "Copyright (c) 2026 Mota-Engil PDF Editor criado por David Sanculane")
+        .set("OriginalFilename", "MotaEngilPDF.exe")
+        .set("InternalName", "MotaEngilPDF.exe");
     if let Err(e) = res.compile() {
         if std::env::var_os("PDFCRAFT_REQUIRE_WINRES").is_some() {
             println!("cargo::error=embedding Windows resources failed: {e}");
             return;
         }
-        println!("cargo:warning=pdfcraft.exe built without icon/version resources: {e}");
+        println!("cargo:warning=MotaEngilPDF.exe built without icon/version resources: {e}");
     }
 }

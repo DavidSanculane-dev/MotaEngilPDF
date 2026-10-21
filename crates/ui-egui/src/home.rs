@@ -24,11 +24,11 @@ pub fn show(app: &mut PdfCraftApp, ui: &mut egui::Ui) {
         egui::Frame::NONE.inner_margin(egui::Margin { left: 36, right: 36, top: 28, bottom: 28 }).show(ui, |ui| {
             ui.label(egui::RichText::new(tl!("Welcome to Mota-Engil PDF Editor")).font(theme::semibold(24.0)));
             ui.label(
-                egui::RichText::new(tl!("An open-source PDF workbench — local, private, and scriptable."))
+                egui::RichText::new(tl!("Um editor de PDF local e privado."))
                     .color(t.text_muted)
                     .font(theme::regular(14.0)),
             );
-            ui.hyperlink_to("Created by David Sanculane", pdfcraft_engine::links::CREATOR_LINKEDIN);
+            ui.hyperlink_to("Criado por David Sanculane", pdfcraft_engine::links::CREATOR_LINKEDIN);
             ui.add_space(22.0);
 
             egui::Frame::NONE
@@ -192,7 +192,7 @@ pub fn show(app: &mut PdfCraftApp, ui: &mut egui::Ui) {
             widgets::section_title(ui, tl!("Privacy"));
             ui.label(
                 egui::RichText::new(tl!(
-                    "Mota-Engil PDF Editor works offline. No telemetry, no account, and no cloud processing unless you add a provider."
+                    "Mota-Engil PDF Editor works offline. No telemetry, no account, and no cloud processing."
                 ))
                 .color(t.text_muted),
             );

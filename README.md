@@ -1,7 +1,7 @@
 <h1 align="center">Mota-Engil PDF Editor</h1>
 
 <p align="center">
-  <b>Created by <a href="https://www.linkedin.com/in/david-sanculane-143b4141/?isSelfProfile=true">David Sanculane</a></b><br>
+  <b>Created by <a href="https://www.linkedin.com/in/david-sanculane-143b4141">David Sanculane</a></b><br>
   <b>The PDF workbench; an open-source, clean-room reimplementation of Adobe Acrobat, rebuilt in pure Rust.</b><br>
   Read, organize, combine, split and secure PDFs in a fast, native app, written in Rust from the ground up.<br>
   macOS · Windows · Linux · FreeBSD · the web

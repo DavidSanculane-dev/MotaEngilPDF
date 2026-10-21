@@ -201,7 +201,7 @@ fn main() -> eframe::Result {
     let started = Rc::new(Cell::new(false));
     let first = if choice == RendererChoice::Gl { eframe::Renderer::Glow } else { eframe::Renderer::Wgpu };
     let result = eframe::run_native(
-        "Mota-Engil PDF Editor",
+        "Mota-Engil PDF Editor criado por David Sanculane",
         native_options(integrated, first),
         app_creator(
             launch.clone(),
@@ -219,7 +219,7 @@ fn main() -> eframe::Result {
             // usually still works there, so that's better than quitting.
             log::error!("the GPU renderer (wgpu) didn't start: {e}. Starting with OpenGL instead; set PDFCRAFT_RENDERER=gl to skip wgpu.");
             eframe::run_native(
-                "Mota-Engil PDF Editor",
+                "Mota-Engil PDF Editor criado por David Sanculane",
                 native_options(integrated, eframe::Renderer::Glow),
                 app_creator(
                     launch,
@@ -262,7 +262,7 @@ fn retry_with_gl(choice: RendererChoice, app_started: bool) -> bool {
 /// The window and renderer settings for one run.
 fn native_options(integrated: bool, renderer: eframe::Renderer) -> eframe::NativeOptions {
     let mut viewport = egui::ViewportBuilder::default()
-        .with_title("Mota-Engil PDF Editor")
+        .with_title("Mota-Engil PDF Editor criado por David Sanculane")
         .with_inner_size([1440.0, 920.0])
         .with_min_inner_size([820.0, 520.0])
         .with_drag_and_drop(true)
